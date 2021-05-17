@@ -18,7 +18,18 @@ public class UserServiceImpl implements UserService {
     public ResultVO checkLogin(String name, String pwd) {
         //根据登录账号查询用户信息
         User user = userDao.queryUserByName(name);
+        //返回前端对象
+        ResultVO vo;
         //判断是否存在
-        return null;
+        if (user!=null){
+            if (pwd.equals(user.getUserPwd())){
+                vo=  new ResultVO(1000,"登录成功",user);
+            }else {
+                vo=   new ResultVO(1001,"密码错误",null);
+            }
+        }else{
+            vo= new ResultVO(1001,"用户不存在",null);
+        }
+        return vo;
     }
 }

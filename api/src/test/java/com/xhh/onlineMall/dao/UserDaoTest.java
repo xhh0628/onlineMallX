@@ -1,6 +1,6 @@
 package com.xhh.onlineMall.dao;
 
-import com.xhh.onlineMall.ApiApplication;
+import com.xhh.ApiApplication;
 import com.xhh.onlineMall.entity.User;
 import org.junit.Test;
 import org.junit.runner.RunWith;
