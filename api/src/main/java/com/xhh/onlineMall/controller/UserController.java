@@ -5,6 +5,7 @@ import com.xhh.onlineMall.service.UserService;
 import com.xhh.onlineMall.vo.ResultVO;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import javax.annotation.Resource;
@@ -18,7 +19,7 @@ public class UserController {
     private UserService userService;
 
 
-    @RequestMapping(value = "/login")
+    @RequestMapping(value = "/login",method = RequestMethod.GET)
     public ResultVO login(String name,String pwd){
         return userService.checkLogin(name,pwd);
     }
