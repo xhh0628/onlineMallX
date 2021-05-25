@@ -1,17 +1,15 @@
 package com.xhh.onlineMall.controller;
 
 
+import com.xhh.onlineMall.entity.Users;
 import com.xhh.onlineMall.service.UserService;
 import com.xhh.onlineMall.vo.ResultVO;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.Resource;
 
-@Controller
-@ResponseBody
+@RestController
 @RequestMapping(value = "/user")
 public class UserController {
 
@@ -19,8 +17,18 @@ public class UserController {
     private UserService userService;
 
 
-    @RequestMapping(value = "/login",method = RequestMethod.GET)
-    public ResultVO login(String name,String pwd){
-        return userService.checkLogin(name,pwd);
+    @GetMapping(value = "/login")
+    public ResultVO login(@RequestParam("username") String username,
+                          @RequestParam("password") String password){
+
+        ResultVO vo=userService.checkLogin(username,password);
+        return vo;
     }
+
+    @PostMapping(value = "/regist")
+    public ResultVO regist(String username,String password){
+        ResultVO vo=userService.userResgit(username,password);
+        return vo;
+    }
+
 }

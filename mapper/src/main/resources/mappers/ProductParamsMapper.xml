@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.xhh.onlineMall.dao.ProductParamsMapper" >
+  <resultMap id="BaseResultMap" type="com.xhh.onlineMall.entity.ProductParams" >
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="param_id" property="paramId" jdbcType="VARCHAR" />
+    <result column="product_id" property="productId" jdbcType="VARCHAR" />
+    <result column="product_place" property="productPlace" jdbcType="VARCHAR" />
+    <result column="foot_period" property="footPeriod" jdbcType="VARCHAR" />
+    <result column="brand" property="brand" jdbcType="VARCHAR" />
+    <result column="factory_name" property="factoryName" jdbcType="VARCHAR" />
+    <result column="factory_address" property="factoryAddress" jdbcType="VARCHAR" />
+    <result column="packaging_method" property="packagingMethod" jdbcType="VARCHAR" />
+    <result column="weight" property="weight" jdbcType="VARCHAR" />
+    <result column="storage_method" property="storageMethod" jdbcType="VARCHAR" />
+    <result column="eat_method" property="eatMethod" jdbcType="VARCHAR" />
+    <result column="create_time" property="createTime" jdbcType="TIMESTAMP" />
+    <result column="update_time" property="updateTime" jdbcType="TIMESTAMP" />
+  </resultMap>
+  <sql id="Example_Where_Clause" >
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <where >
+      <foreach collection="oredCriteria" item="criteria" separator="or" >
+        <if test="criteria.valid" >
+          <trim prefix="(" suffix=")" prefixOverrides="and" >
+            <foreach collection="criteria.criteria" item="criterion" >
+              <choose >
+                <when test="criterion.noValue" >
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue" >
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue" >
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue" >
+                  and ${criterion.condition}
+                  <foreach collection="criterion.value" item="listItem" open="(" close=")" separator="," >
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Update_By_Example_Where_Clause" >
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <where >
+      <foreach collection="example.oredCriteria" item="criteria" separator="or" >
+        <if test="criteria.valid" >
+          <trim prefix="(" suffix=")" prefixOverrides="and" >
+            <foreach collection="criteria.criteria" item="criterion" >
+              <choose >
+                <when test="criterion.noValue" >
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue" >
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue" >
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue" >
+                  and ${criterion.condition}
+                  <foreach collection="criterion.value" item="listItem" open="(" close=")" separator="," >
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Base_Column_List" >
+    <!--
+      WARNING - @mbg.generated
+    -->
+    param_id, product_id, product_place, foot_period, brand, factory_name, factory_address, 
+    packaging_method, weight, storage_method, eat_method, create_time, update_time
+  </sql>
+  <select id="selectByExample" resultMap="BaseResultMap" parameterType="com.xhh.onlineMall.entity.ProductParamsExample" >
+    <!--
+      WARNING - @mbg.generated
+    -->
+    select
+    <if test="distinct" >
+      distinct
+    </if>
+    <include refid="Base_Column_List" />
+    from product_params
+    <if test="_parameter != null" >
+      <include refid="Example_Where_Clause" />
+    </if>
+    <if test="orderByClause != null" >
+      order by ${orderByClause}
+    </if>
+  </select>
+  <delete id="deleteByExample" parameterType="com.xhh.onlineMall.entity.ProductParamsExample" >
+    <!--
+      WARNING - @mbg.generated
+    -->
+    delete from product_params
+    <if test="_parameter != null" >
+      <include refid="Example_Where_Clause" />
+    </if>
+  </delete>
+  <select id="countByExample" parameterType="com.xhh.onlineMall.entity.ProductParamsExample" resultType="java.lang.Integer" >
+    <!--
+      WARNING - @mbg.generated
+    -->
+    select count(*) from product_params
+    <if test="_parameter != null" >
+      <include refid="Example_Where_Clause" />
+    </if>
+  </select>
+  <update id="updateByExampleSelective" parameterType="map" >
+    <!--
+      WARNING - @mbg.generated
+    -->
+    update product_params
+    <set >
+      <if test="record.paramId != null" >
+        param_id = #{record.paramId,jdbcType=VARCHAR},
+      </if>
+      <if test="record.productId != null" >
+        product_id = #{record.productId,jdbcType=VARCHAR},
+      </if>
+      <if test="record.productPlace != null" >
+        product_place = #{record.productPlace,jdbcType=VARCHAR},
+      </if>
+      <if test="record.footPeriod != null" >
+        foot_period = #{record.footPeriod,jdbcType=VARCHAR},
+      </if>
+      <if test="record.brand != null" >
+        brand = #{record.brand,jdbcType=VARCHAR},
+      </if>
+      <if test="record.factoryName != null" >
+        factory_name = #{record.factoryName,jdbcType=VARCHAR},
+      </if>
+      <if test="record.factoryAddress != null" >
+        factory_address = #{record.factoryAddress,jdbcType=VARCHAR},
+      </if>
+      <if test="record.packagingMethod != null" >
+        packaging_method = #{record.packagingMethod,jdbcType=VARCHAR},
+      </if>
+      <if test="record.weight != null" >
+        weight = #{record.weight,jdbcType=VARCHAR},
+      </if>
+      <if test="record.storageMethod != null" >
+        storage_method = #{record.storageMethod,jdbcType=VARCHAR},
+      </if>
+      <if test="record.eatMethod != null" >
+        eat_method = #{record.eatMethod,jdbcType=VARCHAR},
+      </if>
+      <if test="record.createTime != null" >
+        create_time = #{record.createTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="record.updateTime != null" >
+        update_time = #{record.updateTime,jdbcType=TIMESTAMP},
+      </if>
+    </set>
+    <if test="_parameter != null" >
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByExample" parameterType="map" >
+    <!--
+      WARNING - @mbg.generated
+    -->
+    update product_params
+    set param_id = #{record.paramId,jdbcType=VARCHAR},
+      product_id = #{record.productId,jdbcType=VARCHAR},
+      product_place = #{record.productPlace,jdbcType=VARCHAR},
+      foot_period = #{record.footPeriod,jdbcType=VARCHAR},
+      brand = #{record.brand,jdbcType=VARCHAR},
+      factory_name = #{record.factoryName,jdbcType=VARCHAR},
+      factory_address = #{record.factoryAddress,jdbcType=VARCHAR},
+      packaging_method = #{record.packagingMethod,jdbcType=VARCHAR},
+      weight = #{record.weight,jdbcType=VARCHAR},
+      storage_method = #{record.storageMethod,jdbcType=VARCHAR},
+      eat_method = #{record.eatMethod,jdbcType=VARCHAR},
+      create_time = #{record.createTime,jdbcType=TIMESTAMP},
+      update_time = #{record.updateTime,jdbcType=TIMESTAMP}
+    <if test="_parameter != null" >
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+</mapper>
