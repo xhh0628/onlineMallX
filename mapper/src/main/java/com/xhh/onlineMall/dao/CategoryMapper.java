@@ -4,8 +4,12 @@ import com.xhh.onlineMall.entity.Category;
 import com.xhh.onlineMall.entity.CategoryExample;
 import com.xhh.onlineMall.general.GeneralDao;
 import java.util.List;
-import org.apache.ibatis.annotations.Param;
 
+import org.apache.ibatis.annotations.Mapper;
+import org.apache.ibatis.annotations.Param;
+import org.springframework.stereotype.Repository;
+
+@Repository
 public interface CategoryMapper extends GeneralDao<Category> {
     int countByExample(CategoryExample example);
 

@@ -1,8 +1,11 @@
 package com.xhh.onlineMall.entity;
 
+import lombok.Data;
+
 import java.util.ArrayList;
 import java.util.List;
 
+@Data
 public class CategoryExample {
     protected String orderByClause;
 

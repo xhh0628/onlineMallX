@@ -2,9 +2,6 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
 <mapper namespace="com.xhh.onlineMall.dao.OrderItemMapper" >
   <resultMap id="BaseResultMap" type="com.xhh.onlineMall.entity.OrderItem" >
-    <!--
-      WARNING - @mbg.generated
-    -->
     <id column="item_id" property="itemId" jdbcType="VARCHAR" />
     <result column="order_id" property="orderId" jdbcType="VARCHAR" />
     <result column="product_id" property="productId" jdbcType="VARCHAR" />
@@ -19,182 +16,15 @@
     <result column="buy_time" property="buyTime" jdbcType="TIMESTAMP" />
     <result column="is_comment" property="isComment" jdbcType="INTEGER" />
   </resultMap>
-  <sql id="Example_Where_Clause" >
-    <!--
-      WARNING - @mbg.generated
-    -->
-    <where >
-      <foreach collection="oredCriteria" item="criteria" separator="or" >
-        <if test="criteria.valid" >
-          <trim prefix="(" suffix=")" prefixOverrides="and" >
-            <foreach collection="criteria.criteria" item="criterion" >
-              <choose >
-                <when test="criterion.noValue" >
-                  and ${criterion.condition}
-                </when>
-                <when test="criterion.singleValue" >
-                  and ${criterion.condition} #{criterion.value}
-                </when>
-                <when test="criterion.betweenValue" >
-                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
-                </when>
-                <when test="criterion.listValue" >
-                  and ${criterion.condition}
-                  <foreach collection="criterion.value" item="listItem" open="(" close=")" separator="," >
-                    #{listItem}
-                  </foreach>
-                </when>
-              </choose>
-            </foreach>
-          </trim>
-        </if>
-      </foreach>
-    </where>
-  </sql>
-  <sql id="Update_By_Example_Where_Clause" >
-    <!--
-      WARNING - @mbg.generated
-    -->
-    <where >
-      <foreach collection="example.oredCriteria" item="criteria" separator="or" >
-        <if test="criteria.valid" >
-          <trim prefix="(" suffix=")" prefixOverrides="and" >
-            <foreach collection="criteria.criteria" item="criterion" >
-              <choose >
-                <when test="criterion.noValue" >
-                  and ${criterion.condition}
-                </when>
-                <when test="criterion.singleValue" >
-                  and ${criterion.condition} #{criterion.value}
-                </when>
-                <when test="criterion.betweenValue" >
-                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
-                </when>
-                <when test="criterion.listValue" >
-                  and ${criterion.condition}
-                  <foreach collection="criterion.value" item="listItem" open="(" close=")" separator="," >
-                    #{listItem}
-                  </foreach>
-                </when>
-              </choose>
-            </foreach>
-          </trim>
-        </if>
-      </foreach>
-    </where>
-  </sql>
+
+
   <sql id="Base_Column_List" >
-    <!--
-      WARNING - @mbg.generated
-    -->
     item_id, order_id, product_id, product_name, product_img, sku_id, sku_name, product_price, 
     buy_counts, total_amount, basket_date, buy_time, is_comment
   </sql>
-  <select id="selectByExample" resultMap="BaseResultMap" parameterType="com.xhh.onlineMall.entity.OrderItemExample" >
-    <!--
-      WARNING - @mbg.generated
-    -->
-    select
-    <if test="distinct" >
-      distinct
-    </if>
-    <include refid="Base_Column_List" />
-    from order_item
-    <if test="_parameter != null" >
-      <include refid="Example_Where_Clause" />
-    </if>
-    <if test="orderByClause != null" >
-      order by ${orderByClause}
-    </if>
-  </select>
-  <delete id="deleteByExample" parameterType="com.xhh.onlineMall.entity.OrderItemExample" >
-    <!--
-      WARNING - @mbg.generated
-    -->
-    delete from order_item
-    <if test="_parameter != null" >
-      <include refid="Example_Where_Clause" />
-    </if>
-  </delete>
-  <select id="countByExample" parameterType="com.xhh.onlineMall.entity.OrderItemExample" resultType="java.lang.Integer" >
-    <!--
-      WARNING - @mbg.generated
-    -->
-    select count(*) from order_item
-    <if test="_parameter != null" >
-      <include refid="Example_Where_Clause" />
-    </if>
-  </select>
-  <update id="updateByExampleSelective" parameterType="map" >
-    <!--
-      WARNING - @mbg.generated
-    -->
-    update order_item
-    <set >
-      <if test="record.itemId != null" >
-        item_id = #{record.itemId,jdbcType=VARCHAR},
-      </if>
-      <if test="record.orderId != null" >
-        order_id = #{record.orderId,jdbcType=VARCHAR},
-      </if>
-      <if test="record.productId != null" >
-        product_id = #{record.productId,jdbcType=VARCHAR},
-      </if>
-      <if test="record.productName != null" >
-        product_name = #{record.productName,jdbcType=VARCHAR},
-      </if>
-      <if test="record.productImg != null" >
-        product_img = #{record.productImg,jdbcType=VARCHAR},
-      </if>
-      <if test="record.skuId != null" >
-        sku_id = #{record.skuId,jdbcType=VARCHAR},
-      </if>
-      <if test="record.skuName != null" >
-        sku_name = #{record.skuName,jdbcType=VARCHAR},
-      </if>
-      <if test="record.productPrice != null" >
-        product_price = #{record.productPrice,jdbcType=DECIMAL},
-      </if>
-      <if test="record.buyCounts != null" >
-        buy_counts = #{record.buyCounts,jdbcType=INTEGER},
-      </if>
-      <if test="record.totalAmount != null" >
-        total_amount = #{record.totalAmount,jdbcType=DECIMAL},
-      </if>
-      <if test="record.basketDate != null" >
-        basket_date = #{record.basketDate,jdbcType=TIMESTAMP},
-      </if>
-      <if test="record.buyTime != null" >
-        buy_time = #{record.buyTime,jdbcType=TIMESTAMP},
-      </if>
-      <if test="record.isComment != null" >
-        is_comment = #{record.isComment,jdbcType=INTEGER},
-      </if>
-    </set>
-    <if test="_parameter != null" >
-      <include refid="Update_By_Example_Where_Clause" />
-    </if>
-  </update>
-  <update id="updateByExample" parameterType="map" >
-    <!--
-      WARNING - @mbg.generated
-    -->
-    update order_item
-    set item_id = #{record.itemId,jdbcType=VARCHAR},
-      order_id = #{record.orderId,jdbcType=VARCHAR},
-      product_id = #{record.productId,jdbcType=VARCHAR},
-      product_name = #{record.productName,jdbcType=VARCHAR},
-      product_img = #{record.productImg,jdbcType=VARCHAR},
-      sku_id = #{record.skuId,jdbcType=VARCHAR},
-      sku_name = #{record.skuName,jdbcType=VARCHAR},
-      product_price = #{record.productPrice,jdbcType=DECIMAL},
-      buy_counts = #{record.buyCounts,jdbcType=INTEGER},
-      total_amount = #{record.totalAmount,jdbcType=DECIMAL},
-      basket_date = #{record.basketDate,jdbcType=TIMESTAMP},
-      buy_time = #{record.buyTime,jdbcType=TIMESTAMP},
-      is_comment = #{record.isComment,jdbcType=INTEGER}
-    <if test="_parameter != null" >
-      <include refid="Update_By_Example_Where_Clause" />
-    </if>
-  </update>
+
+
+
+
+
 </mapper>

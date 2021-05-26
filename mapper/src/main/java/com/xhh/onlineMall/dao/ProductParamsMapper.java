@@ -5,7 +5,9 @@ import com.xhh.onlineMall.entity.ProductParamsExample;
 import com.xhh.onlineMall.general.GeneralDao;
 import java.util.List;
 import org.apache.ibatis.annotations.Param;
+import org.springframework.stereotype.Repository;
 
+@Repository
 public interface ProductParamsMapper extends GeneralDao<ProductParams> {
     int countByExample(ProductParamsExample example);
 

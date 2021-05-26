@@ -1,7 +1,6 @@
 package com.xhh.onlineMall.controller;
 
 
-import com.xhh.onlineMall.entity.Users;
 import com.xhh.onlineMall.service.UserService;
 import com.xhh.onlineMall.vo.ResultVO;
 import org.springframework.stereotype.Controller;
@@ -9,8 +8,10 @@ import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.Resource;
 
-@RestController
+@Controller
+@ResponseBody
 @RequestMapping(value = "/user")
+@CrossOrigin
 public class UserController {
 
  @Resource

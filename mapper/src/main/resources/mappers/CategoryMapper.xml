@@ -1,10 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
 <mapper namespace="com.xhh.onlineMall.dao.CategoryMapper" >
+
   <resultMap id="BaseResultMap" type="com.xhh.onlineMall.entity.Category" >
-    <!--
-      WARNING - @mbg.generated
-    -->
     <id column="category_id" property="categoryId" jdbcType="INTEGER" />
     <result column="category_name" property="categoryName" jdbcType="VARCHAR" />
     <result column="category_level" property="categoryLevel" jdbcType="INTEGER" />
@@ -14,162 +12,10 @@
     <result column="category_pic" property="categoryPic" jdbcType="VARCHAR" />
     <result column="category_bg_color" property="categoryBgColor" jdbcType="VARCHAR" />
   </resultMap>
-  <sql id="Example_Where_Clause" >
-    <!--
-      WARNING - @mbg.generated
-    -->
-    <where >
-      <foreach collection="oredCriteria" item="criteria" separator="or" >
-        <if test="criteria.valid" >
-          <trim prefix="(" suffix=")" prefixOverrides="and" >
-            <foreach collection="criteria.criteria" item="criterion" >
-              <choose >
-                <when test="criterion.noValue" >
-                  and ${criterion.condition}
-                </when>
-                <when test="criterion.singleValue" >
-                  and ${criterion.condition} #{criterion.value}
-                </when>
-                <when test="criterion.betweenValue" >
-                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
-                </when>
-                <when test="criterion.listValue" >
-                  and ${criterion.condition}
-                  <foreach collection="criterion.value" item="listItem" open="(" close=")" separator="," >
-                    #{listItem}
-                  </foreach>
-                </when>
-              </choose>
-            </foreach>
-          </trim>
-        </if>
-      </foreach>
-    </where>
-  </sql>
-  <sql id="Update_By_Example_Where_Clause" >
-    <!--
-      WARNING - @mbg.generated
-    -->
-    <where >
-      <foreach collection="example.oredCriteria" item="criteria" separator="or" >
-        <if test="criteria.valid" >
-          <trim prefix="(" suffix=")" prefixOverrides="and" >
-            <foreach collection="criteria.criteria" item="criterion" >
-              <choose >
-                <when test="criterion.noValue" >
-                  and ${criterion.condition}
-                </when>
-                <when test="criterion.singleValue" >
-                  and ${criterion.condition} #{criterion.value}
-                </when>
-                <when test="criterion.betweenValue" >
-                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
-                </when>
-                <when test="criterion.listValue" >
-                  and ${criterion.condition}
-                  <foreach collection="criterion.value" item="listItem" open="(" close=")" separator="," >
-                    #{listItem}
-                  </foreach>
-                </when>
-              </choose>
-            </foreach>
-          </trim>
-        </if>
-      </foreach>
-    </where>
-  </sql>
+
   <sql id="Base_Column_List" >
-    <!--
-      WARNING - @mbg.generated
-    -->
     category_id, category_name, category_level, parent_id, category_icon, category_slogan, 
     category_pic, category_bg_color
   </sql>
-  <select id="selectByExample" resultMap="BaseResultMap" parameterType="com.xhh.onlineMall.entity.CategoryExample" >
-    <!--
-      WARNING - @mbg.generated
-    -->
-    select
-    <if test="distinct" >
-      distinct
-    </if>
-    <include refid="Base_Column_List" />
-    from category
-    <if test="_parameter != null" >
-      <include refid="Example_Where_Clause" />
-    </if>
-    <if test="orderByClause != null" >
-      order by ${orderByClause}
-    </if>
-  </select>
-  <delete id="deleteByExample" parameterType="com.xhh.onlineMall.entity.CategoryExample" >
-    <!--
-      WARNING - @mbg.generated
-    -->
-    delete from category
-    <if test="_parameter != null" >
-      <include refid="Example_Where_Clause" />
-    </if>
-  </delete>
-  <select id="countByExample" parameterType="com.xhh.onlineMall.entity.CategoryExample" resultType="java.lang.Integer" >
-    <!--
-      WARNING - @mbg.generated
-    -->
-    select count(*) from category
-    <if test="_parameter != null" >
-      <include refid="Example_Where_Clause" />
-    </if>
-  </select>
-  <update id="updateByExampleSelective" parameterType="map" >
-    <!--
-      WARNING - @mbg.generated
-    -->
-    update category
-    <set >
-      <if test="record.categoryId != null" >
-        category_id = #{record.categoryId,jdbcType=INTEGER},
-      </if>
-      <if test="record.categoryName != null" >
-        category_name = #{record.categoryName,jdbcType=VARCHAR},
-      </if>
-      <if test="record.categoryLevel != null" >
-        category_level = #{record.categoryLevel,jdbcType=INTEGER},
-      </if>
-      <if test="record.parentId != null" >
-        parent_id = #{record.parentId,jdbcType=INTEGER},
-      </if>
-      <if test="record.categoryIcon != null" >
-        category_icon = #{record.categoryIcon,jdbcType=VARCHAR},
-      </if>
-      <if test="record.categorySlogan != null" >
-        category_slogan = #{record.categorySlogan,jdbcType=VARCHAR},
-      </if>
-      <if test="record.categoryPic != null" >
-        category_pic = #{record.categoryPic,jdbcType=VARCHAR},
-      </if>
-      <if test="record.categoryBgColor != null" >
-        category_bg_color = #{record.categoryBgColor,jdbcType=VARCHAR},
-      </if>
-    </set>
-    <if test="_parameter != null" >
-      <include refid="Update_By_Example_Where_Clause" />
-    </if>
-  </update>
-  <update id="updateByExample" parameterType="map" >
-    <!--
-      WARNING - @mbg.generated
-    -->
-    update category
-    set category_id = #{record.categoryId,jdbcType=INTEGER},
-      category_name = #{record.categoryName,jdbcType=VARCHAR},
-      category_level = #{record.categoryLevel,jdbcType=INTEGER},
-      parent_id = #{record.parentId,jdbcType=INTEGER},
-      category_icon = #{record.categoryIcon,jdbcType=VARCHAR},
-      category_slogan = #{record.categorySlogan,jdbcType=VARCHAR},
-      category_pic = #{record.categoryPic,jdbcType=VARCHAR},
-      category_bg_color = #{record.categoryBgColor,jdbcType=VARCHAR}
-    <if test="_parameter != null" >
-      <include refid="Update_By_Example_Where_Clause" />
-    </if>
-  </update>
+
 </mapper>

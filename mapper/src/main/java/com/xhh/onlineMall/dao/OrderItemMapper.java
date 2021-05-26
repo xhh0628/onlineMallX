@@ -5,7 +5,9 @@ import com.xhh.onlineMall.entity.OrderItemExample;
 import com.xhh.onlineMall.general.GeneralDao;
 import java.util.List;
 import org.apache.ibatis.annotations.Param;
+import org.springframework.stereotype.Repository;
 
+@Repository
 public interface OrderItemMapper extends GeneralDao<OrderItem> {
     int countByExample(OrderItemExample example);
 
