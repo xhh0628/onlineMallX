@@ -5,6 +5,7 @@ import com.xhh.onlineMall.entity.Users;
 import com.xhh.onlineMall.entity.UsersExample;
 import com.xhh.onlineMall.service.UserService;
 import com.xhh.onlineMall.utils.MD5Utils;
+import com.xhh.onlineMall.vo.ResStatus;
 import com.xhh.onlineMall.vo.ResultVO;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -31,12 +32,12 @@ public class UserServiceImpl implements UserService {
         //判断是否存在
         if (users.size()==1){
             if (md5Pwd.equals(users.get(0).getPassword())){
-                return new ResultVO(10000,"登录成功",users.get(0));
+                return new ResultVO(ResStatus.OK,"登录成功",users.get(0));
             }else {
-                return new ResultVO(10001,"密码错误",null);
+                return new ResultVO(ResStatus.NO,"密码错误",null);
             }
         }else{
-            return new ResultVO(10001,"用户不存在",null);
+            return new ResultVO(ResStatus.NO,"用户不存在",null);
         }
 
     }
@@ -56,19 +57,19 @@ public class UserServiceImpl implements UserService {
             String md5Pwd= MD5Utils.md5(pwd);
             Users user=new Users();
             user.setUsername(name);
-            user.setPassword(pwd);
+            user.setPassword(md5Pwd);
             user.setUserImg("1.jpg");
             user.setUserRegtime(new Date());
             user.setUserModtime(user.getUserRegtime());
             int i=usersMapper.insertUseGeneratedKeys(user);//新增后主键回填
             if (i>0){
-               return new ResultVO(10000,"注册成功！",user);//注册成功返回user对象
+               return new ResultVO(ResStatus.OK,"注册成功！",user);//注册成功返回user对象
             }else {
-                return new ResultVO(10002,"注册失败！",null);
+                return new ResultVO(ResStatus.NO,"注册失败！",null);
             }
         }else {
             //返回提示已被注册
-            return new ResultVO(10001,"用户名已被注册！",null);
+            return new ResultVO(ResStatus.NO,"用户名已被注册！",null);
         }
 
     }

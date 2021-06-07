@@ -1,12 +1,14 @@
 package com.xhh.onlineMall.controller;
 
 
+import com.xhh.onlineMall.entity.Users;
 import com.xhh.onlineMall.service.UserService;
 import com.xhh.onlineMall.vo.ResultVO;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.Resource;
+import javax.servlet.http.HttpServletRequest;
 
 @Controller
 @ResponseBody
@@ -14,7 +16,7 @@ import javax.annotation.Resource;
 @CrossOrigin
 public class UserController {
 
- @Resource
+    @Resource
     private UserService userService;
 
 
@@ -27,8 +29,9 @@ public class UserController {
     }
 
     @PostMapping(value = "/regist")
-    public ResultVO regist(String username,String password){
-        ResultVO vo=userService.userResgit(username,password);
+    public ResultVO regist(@RequestBody Users user){
+
+        ResultVO vo=userService.userResgit(user.getUsername(),user.getPassword());
         return vo;
     }
 
