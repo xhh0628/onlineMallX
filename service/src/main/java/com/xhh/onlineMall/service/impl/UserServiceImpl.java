@@ -4,6 +4,7 @@ import com.xhh.onlineMall.dao.UsersMapper;
 import com.xhh.onlineMall.entity.Users;
 import com.xhh.onlineMall.entity.UsersExample;
 import com.xhh.onlineMall.service.UserService;
+import com.xhh.onlineMall.utils.Base64Utils;
 import com.xhh.onlineMall.utils.MD5Utils;
 import com.xhh.onlineMall.vo.ResStatus;
 import com.xhh.onlineMall.vo.ResultVO;
@@ -32,7 +33,9 @@ public class UserServiceImpl implements UserService {
         //判断是否存在
         if (users.size()==1){
             if (md5Pwd.equals(users.get(0).getPassword())){
-                return new ResultVO(ResStatus.OK,"登录成功",users.get(0));
+                //登录成功则生成token
+                String token= Base64Utils.encode(name+"123456");
+                return new ResultVO(ResStatus.OK,token,users.get(0));
             }else {
                 return new ResultVO(ResStatus.NO,"密码错误",null);
             }

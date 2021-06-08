@@ -24,7 +24,9 @@ public class UserController {
     public ResultVO login(@RequestParam("username") String username,
                           @RequestParam("password") String password){
 
+        //验证登录
         ResultVO vo=userService.checkLogin(username,password);
+
         return vo;
     }
 
