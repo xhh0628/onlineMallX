@@ -1,8 +1,9 @@
 package com.xhh.onlineMall.controller;
 
-import com.xhh.onlineMall.utils.Base64Utils;
+import com.auth0.jwt.impl.JWTParser;
 import com.xhh.onlineMall.vo.ResStatus;
 import com.xhh.onlineMall.vo.ResultVO;
+import io.jsonwebtoken.*;
 import io.swagger.annotations.Api;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -16,22 +17,11 @@ import org.springframework.web.bind.annotation.RestController;
 public class ShopcartController {
 
     @GetMapping("/list")
-    public ResultVO listcarts(String token){
-        //获取参数token
-        if(token==null){
-            return new ResultVO(ResStatus.NO,"未登录",null);
-        }else{
-            //校验token
-            String decode = Base64Utils.decode(token);
-            if (decode.endsWith("123456")){
-                //token校验通过
-                return new ResultVO(ResStatus.OK,"sucess",null);
-            }else {
-                return new ResultVO(ResStatus.NO,"token验证失败",null);
-            }
+    public ResultVO listcarts(  ){
+            //获取购物车列表，私密资源，拦截器校验token
+            return new ResultVO(ResStatus.OK,"sucess",null);
         }
 
 
-    }
-
 }
+

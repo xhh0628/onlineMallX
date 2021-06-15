@@ -8,12 +8,17 @@ import com.xhh.onlineMall.utils.Base64Utils;
 import com.xhh.onlineMall.utils.MD5Utils;
 import com.xhh.onlineMall.vo.ResStatus;
 import com.xhh.onlineMall.vo.ResultVO;
+import io.jsonwebtoken.JwtBuilder;
+import io.jsonwebtoken.Jwts;
+import io.jsonwebtoken.SignatureAlgorithm;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import javax.annotation.Resource;
 import java.util.Date;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Set;
 
 @Service
 public class UserServiceImpl implements UserService {
@@ -33,8 +38,22 @@ public class UserServiceImpl implements UserService {
         //判断是否存在
         if (users.size()==1){
             if (md5Pwd.equals(users.get(0).getPassword())){
+                HashMap<String,Object> map=new HashMap<>();
+                map.put("key1","value1");
+                map.put("author","xhh");
                 //登录成功则生成token
-                String token= Base64Utils.encode(name+"123456");
+              //  String token= Base64Utils.encode(name+"123456");
+                JwtBuilder jwtBuilde= Jwts.builder();
+
+                jwtBuilde.setSubject(name)                                       //主题用户名
+                .setIssuedAt(new Date())                                         //设置token创建时间，校验过期
+                .setId(users.get(0).getUserId().toString())                      //设置用户id
+                .setClaims(map)//map可以存放用户权限信息
+                .setExpiration(new Date(System.currentTimeMillis()+24*60*60*1000))//设置过期时间，24小时后
+                .signWith(SignatureAlgorithm.HS256,"xhh0628") //设置加密方式和密码
+                .compact();
+
+                String token=jwtBuilde.compact();
                 return new ResultVO(ResStatus.OK,token,users.get(0));
             }else {
                 return new ResultVO(ResStatus.NO,"密码错误",null);
