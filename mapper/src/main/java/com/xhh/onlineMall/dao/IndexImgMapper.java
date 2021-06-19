@@ -13,9 +13,13 @@ public interface IndexImgMapper extends GeneralDao<IndexImg> {
 
     int deleteByExample(IndexImgExample example);
 
+
     List<IndexImg> selectByExample(IndexImgExample example);
 
     int updateByExampleSelective(@Param("record") IndexImg record, @Param("example") IndexImgExample example);
 
     int updateByExample(@Param("record") IndexImg record, @Param("example") IndexImgExample example);
+
+    //查询轮播图信息：查询status=1，按照seq排序
+    List<IndexImg> selectIndexImgs();
 }
