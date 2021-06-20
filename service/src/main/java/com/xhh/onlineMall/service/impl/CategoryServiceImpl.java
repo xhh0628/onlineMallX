@@ -30,4 +30,11 @@ public class CategoryServiceImpl implements CategoryService {
         return vo;
     }
 
+    @Override
+    public ResultVO selectListFirstLevelCategories() {
+        List<CategoryVO> categoryVOS = categoryMapper.selectFirstLevelCategories();
+        ResultVO vo = new ResultVO(ResStatus.OK, "success", categoryVOS);
+        return vo;
+    }
+
 }

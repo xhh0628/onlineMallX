@@ -18,4 +18,7 @@ public interface ProductImgMapper extends GeneralDao<ProductImg> {
     int updateByExampleSelective(@Param("record") ProductImg record, @Param("example") ProductImgExample example);
 
     int updateByExample(@Param("record") ProductImg record, @Param("example") ProductImgExample example);
+
+    //根据商品id查询对应图片信息
+    List<ProductImg> selectProductImgsByProductId(int productId);
 }

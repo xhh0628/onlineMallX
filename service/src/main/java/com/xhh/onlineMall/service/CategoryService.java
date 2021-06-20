@@ -17,4 +17,7 @@ public interface CategoryService {
      * @return
      */
     ResultVO selectListCategories2(int parentId);
+
+
+    ResultVO selectListFirstLevelCategories();
 }

@@ -2,9 +2,6 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
 <mapper namespace="com.xhh.onlineMall.dao.ProductMapper" >
   <resultMap id="BaseResultMap" type="com.xhh.onlineMall.entity.Product" >
-    <!--
-      WARNING - @mbg.generated
-    -->
     <id column="product_id" property="productId" jdbcType="VARCHAR" />
     <result column="product_name" property="productName" jdbcType="VARCHAR" />
     <result column="category_id" property="categoryId" jdbcType="INTEGER" />
@@ -16,9 +13,48 @@
     <result column="content" property="content" jdbcType="LONGVARCHAR" />
   </resultMap>
 
+  <resultMap id="BaseResultMapVO" type="com.xhh.onlineMall.entity.ProductVO" >
+    <id column="product_id" property="productId" jdbcType="VARCHAR" />
+    <result column="product_name" property="productName" jdbcType="VARCHAR" />
+    <result column="category_id" property="categoryId" jdbcType="INTEGER" />
+    <result column="root_category_id" property="rootCategoryId" jdbcType="INTEGER" />
+    <result column="sold_num" property="soldNum" jdbcType="INTEGER" />
+    <result column="product_status" property="productStatus" jdbcType="INTEGER" />
+    <result column="create_time" property="createTime" jdbcType="TIMESTAMP" />
+    <result column="update_time" property="updateTime" jdbcType="TIMESTAMP" />
+    <result column="content" property="content" jdbcType="LONGVARCHAR" />
+      <collection property="productImgs" select="com.xhh.onlineMall.dao.ProductImgMapper.selectProductImgsByProductId" column="product_id" javaType="java.util.List"/>
+  </resultMap>
   <sql id="Base_Column_List" >
     product_id, product_name, category_id, root_category_id, sold_num, product_status, 
-    create_time, update_time
+    create_time, update_time,content
   </sql>
+
+  <select id="selectRecommendProducts" resultMap="BaseResultMapVO">
+    SELECT
+      product_id, product_name, category_id, root_category_id, sold_num, product_status,
+      create_time, update_time,content
+    FROM
+      product
+    ORDER BY
+      create_time
+    DESC
+      LIMIT 0,3
+  </select>
+
+  <select id="selectTop6ByCategory" resultMap="BaseResultMapVO">
+    select
+      product_id, product_name, category_id, root_category_id, sold_num, product_status,
+      create_time, update_time,content
+    from
+      product
+    where
+      root_category_id=#{categoryId}
+    order  by
+      sold_num DESC
+    limit 0,6
+
+
+  </select>
 
 </mapper>

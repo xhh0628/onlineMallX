@@ -25,4 +25,8 @@ public interface CategoryMapper extends GeneralDao<Category> {
 
     //子查询实现分类列表
     List<CategoryVO> selectAllCategories2(int parentId);
+
+    //查询1级类别
+    List<CategoryVO> selectFirstLevelCategories();
+
 }

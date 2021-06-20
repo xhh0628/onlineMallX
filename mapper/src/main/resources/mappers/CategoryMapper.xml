@@ -2,7 +2,7 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
 <mapper namespace="com.xhh.onlineMall.dao.CategoryMapper" >
 
-  <resultMap id="BaseResultMap" type="com.xhh.onlineMall.entity.Category" >
+    <resultMap id="BaseResultMap" type="com.xhh.onlineMall.entity.Category" >
     <id column="category_id" property="categoryId" jdbcType="INTEGER" />
     <result column="category_name" property="categoryName" jdbcType="VARCHAR" />
     <result column="category_level" property="categoryLevel" jdbcType="INTEGER" />
@@ -13,13 +13,13 @@
     <result column="category_bg_color" property="categoryBgColor" jdbcType="VARCHAR" />
   </resultMap>
 
-  <sql id="Base_Column_List" >
-    category_id, category_name, category_level, parent_id, category_icon, category_slogan, 
-    category_pic, category_bg_color
-  </sql>
+    <sql id="Base_Column_List" >
+        category_id, category_name, category_level, parent_id, category_icon, category_slogan,
+        category_pic, category_bg_color
+    </sql>
 
 
-  <resultMap id="categoryVOMap" type="com.xhh.onlineMall.entity.CategoryVO" >
+    <resultMap id="categoryVOMap" type="com.xhh.onlineMall.entity.CategoryVO" >
     <id column="category_id1" property="categoryId" jdbcType="INTEGER" />
     <result column="category_name1" property="categoryName" jdbcType="VARCHAR" />
     <result column="category_level1" property="categoryLevel" jdbcType="INTEGER" />
@@ -54,7 +54,19 @@
          <collection property="categories" column="category_id" select="selectAllCategories2" ofType="com.xhh.onlineMall.entity.CategoryVO" javaType="java.util.List" />
     </resultMap>
 
- <select id="selectAllCategories" resultMap="categoryVOMap">
+    <resultMap id="categoryVOMap3" type="com.xhh.onlineMall.entity.CategoryVO" >
+        <id column="category_id" property="categoryId" jdbcType="INTEGER" />
+        <result column="category_name" property="categoryName" jdbcType="VARCHAR" />
+        <result column="category_level" property="categoryLevel" jdbcType="INTEGER" />
+        <result column="parent_id" property="parentId" jdbcType="INTEGER" />
+        <result column="category_icon" property="categoryIcon" jdbcType="VARCHAR" />
+        <result column="category_slogan" property="categorySlogan" jdbcType="VARCHAR" />
+        <result column="category_pic" property="categoryPic" jdbcType="VARCHAR" />
+        <result column="category_bg_color" property="categoryBgColor" jdbcType="VARCHAR" />
+        <collection property="products" column="category_id" select="com.xhh.onlineMall.dao.ProductMapper.selectTop6ByCategory" ofType="com.xhh.onlineMall.entity.CategoryVO" javaType="java.util.List" />
+    </resultMap>
+
+    <select id="selectAllCategories" resultMap="categoryVOMap">
         select
             c1.category_id 'category_id1',
             c1.category_name 'category_name1',
@@ -93,4 +105,16 @@
             parent_id=#{parentId}
 
     </select>
+
+
+    <select id="selectFirstLevelCategories" resultMap="categoryVOMap3">
+        select
+            category_id, category_name, category_level, parent_id, category_icon, category_slogan,
+            category_pic, category_bg_color
+        from
+            category
+        where
+            category_level='1'
+    </select>
+
 </mapper>
