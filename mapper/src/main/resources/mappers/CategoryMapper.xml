@@ -63,6 +63,9 @@
         <result column="category_slogan" property="categorySlogan" jdbcType="VARCHAR" />
         <result column="category_pic" property="categoryPic" jdbcType="VARCHAR" />
         <result column="category_bg_color" property="categoryBgColor" jdbcType="VARCHAR" />
+<!--
+        <collection property="categories" column="category_id" select="selectAllCategories2" ofType="com.xhh.onlineMall.entity.CategoryVO" javaType="java.util.List" />
+-->
         <collection property="products" column="category_id" select="com.xhh.onlineMall.dao.ProductMapper.selectTop6ByCategory" ofType="com.xhh.onlineMall.entity.CategoryVO" javaType="java.util.List" />
     </resultMap>
 
