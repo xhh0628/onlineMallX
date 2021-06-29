@@ -1,5 +1,6 @@
 package com.xhh.onlineMall.controller;
 
+import com.xhh.onlineMall.service.ProductCommentsService;
 import com.xhh.onlineMall.service.ProductService;
 import com.xhh.onlineMall.vo.ResultVO;
 import io.swagger.annotations.Api;
@@ -15,10 +16,24 @@ public class ProductController {
 
     @Autowired
     private ProductService productService;
+    @Autowired
+    private ProductCommentsService productCommentsService;
 
     @GetMapping("/detail-info/{pid}")
     @ApiOperation("商品基本信息查询接口")
     public ResultVO getProductBasicInfo(@PathVariable("pid") String pid){
         return productService.getProductBasicInfo(pid);
+    }
+
+    @GetMapping("/detail-params/{pid}")
+    @ApiOperation("商品参数信息查询接口")
+    public ResultVO getProductParams(@PathVariable("pid") String pid){
+        return productService.getProductParamsById(pid);
+    }
+
+    @GetMapping("/detail-comments/{pid}")
+    @ApiOperation("商品评论信息查询接口")
+    public ResultVO getProductComments(@PathVariable("pid") String pid){
+        return productCommentsService.listCommentsByProductId(pid);
     }
 }

@@ -2,11 +2,9 @@ package com.xhh.onlineMall.service.impl;
 
 import com.xhh.onlineMall.dao.ProductImgMapper;
 import com.xhh.onlineMall.dao.ProductMapper;
+import com.xhh.onlineMall.dao.ProductParamsMapper;
 import com.xhh.onlineMall.dao.ProductSkuMapper;
-import com.xhh.onlineMall.entity.Product;
-import com.xhh.onlineMall.entity.ProductImg;
-import com.xhh.onlineMall.entity.ProductSku;
-import com.xhh.onlineMall.entity.ProductVO;
+import com.xhh.onlineMall.entity.*;
 import com.xhh.onlineMall.service.ProductService;
 import com.xhh.onlineMall.vo.ResStatus;
 import com.xhh.onlineMall.vo.ResultVO;
@@ -28,6 +26,8 @@ public class ProductServiceImpl implements ProductService {
     private ProductImgMapper productImgMapper;
     @Autowired
     private ProductSkuMapper productSkuMapper;
+    @Autowired
+    private ProductParamsMapper productParamsMapper;
 
 
     @Override
@@ -66,5 +66,18 @@ public class ProductServiceImpl implements ProductService {
             return new ResultVO(ResStatus.NO,"商品不存在",null);
         }
 
+    }
+
+    @Override
+    public ResultVO getProductParamsById(String productId) {
+        Example example = new Example(ProductParams.class);
+        Example.Criteria criteria = example.createCriteria();
+        criteria.andEqualTo("productId",productId);
+        List<ProductParams> productParams = productParamsMapper.selectByExample(example);
+        if (productParams.size()>0){
+            return new ResultVO(ResStatus.OK,"success",productParams.get(0));
+        }else {
+            return new ResultVO(ResStatus.NO,"暂无商品信息介绍",null);
+        }
     }
 }
