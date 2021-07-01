@@ -61,7 +61,7 @@
         u.user_id=c.user_id
     where
         c.product_id=#{productId}
-
+      limit #{start},#{limit}
   </select>
 
 </mapper>

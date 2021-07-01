@@ -32,8 +32,14 @@ public class ProductController {
     }
 
     @GetMapping("/detail-comments/{pid}")
-    @ApiOperation("商品评论信息查询接口")
-    public ResultVO getProductComments(@PathVariable("pid") String pid){
-        return productCommentsService.listCommentsByProductId(pid);
+    @ApiOperation("商品评论列表信息查询接口")
+    public ResultVO getProductComments(@PathVariable("pid") String pid,int pageNum,int limit){
+        return productCommentsService.listCommentsByProductId(pid,pageNum,limit);
+    }
+
+    @GetMapping("/detail-commentsCount/{pid}")
+    @ApiOperation("商品获取评论数和好评率接口")
+    public ResultVO getProductCommentsCount(@PathVariable("pid") String pid){
+        return productCommentsService.gerCommentsCountByProductId(pid);
     }
 }
