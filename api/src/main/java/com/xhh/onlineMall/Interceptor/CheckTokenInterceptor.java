@@ -35,9 +35,8 @@ public class CheckTokenInterceptor implements HandlerInterceptor {
             //后不执行
         }
         String token = request.getHeader("token");
-        System.out.println("token______________+++++++++++++++++++++++++>>>>>>>>>>>>>>>>>>>"+token);
         if (token == null) {
-            ResultVO vo = new ResultVO(ResStatus.NO, "请登录后操作", null);
+            ResultVO vo = new ResultVO(ResStatus.NO_LOGIN, "请先登录后操作", null);
             //没有token，未登录
             doResponse(response,vo);
         } else {
@@ -51,13 +50,13 @@ public class CheckTokenInterceptor implements HandlerInterceptor {
                 return true;
             } catch (ExpiredJwtException e) {
                 //token校验正确但过期
-                ResultVO vo = new ResultVO(ResStatus.NO, "登录过期请重新登录", null);
+                ResultVO vo = new ResultVO(ResStatus.LOGIN_TIMEOUT, "登录过期请重新登录", null);
                 doResponse(response,vo);
             } catch (UnsupportedJwtException e) {
                 ResultVO vo = new ResultVO(ResStatus.NO, "登录token校验失败", null);
                 doResponse(response,vo);
             } catch (Exception e) {
-                ResultVO vo = new ResultVO(ResStatus.NO, "登录失败，请重新登录", null);
+                ResultVO vo = new ResultVO(ResStatus.NO_LOGIN, "登录失败，请重新登录", null);
                 doResponse(response,vo);
             }
         }
