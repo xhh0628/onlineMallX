@@ -23,7 +23,7 @@ public class UserAddrServiceImpl implements UserAddrService {
     public ResultVO listAddrsByUserId(int userId) {
         Example example = new Example(UserAddr.class);
         Example.Criteria criteria = example.createCriteria();
-        criteria.andEqualTo("user_id",userId);
+        criteria.andEqualTo("userId",userId);
         criteria.andEqualTo("status",1);
         List<UserAddr> userAddrs = userAddrMapper.selectByExample(example);
         ResultVO vo = new ResultVO(ResStatus.OK, "success", userAddrs);
