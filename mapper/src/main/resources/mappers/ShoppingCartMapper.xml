@@ -30,6 +30,25 @@
     <result column="sku_name" property="skuName" jdbcType="VARCHAR" />
   </resultMap>
 
+  <resultMap id="BaseResultMapVO2" type="com.xhh.onlineMall.entity.ShoppingCartVO" >
+    <id column="cart_id" property="cartId" jdbcType="INTEGER" />
+    <result column="product_id" property="productId" jdbcType="VARCHAR" />
+    <result column="sku_id" property="skuId" jdbcType="VARCHAR" />
+    <result column="user_id" property="userId" jdbcType="VARCHAR" />
+    <result column="cart_num" property="cartNum" jdbcType="VARCHAR" />
+    <result column="cart_time" property="cartTime" jdbcType="VARCHAR" />
+    <result column="product_price" property="productPrice" jdbcType="DECIMAL" />
+    <result column="sku_props" property="skuProps" jdbcType="VARCHAR" />
+
+    <result column="product_name" property="productName" jdbcType="VARCHAR" />
+    <result column="url" property="productImg" jdbcType="VARCHAR" />
+
+    <result column="original_price" property="originalPrice" jdbcType="INTEGER" />
+    <result column="sell_price" property="sellPrice" jdbcType="INTEGER" />
+    <result column="sku_name" property="skuName" jdbcType="VARCHAR" />
+    <result column="stock" property="skuStock" jdbcType="VARCHAR" />
+  </resultMap>
+
   <sql id="Base_Column_List" >
     cart_id, product_id, sku_id, user_id, cart_num, cart_time, product_price, sku_props
   </sql>
@@ -66,12 +85,12 @@
       cart_id=#{cartId}
   </update>
 
-  <select id="selectShopCartByCids" resultMap="BaseResultMapVO">
+  <select id="selectShopCartByCids" resultMap="BaseResultMapVO2">
     select
       c.cart_id, c.product_id, c.sku_id, c.user_id, c.cart_num, c.cart_time, c.product_price, c.sku_props,
       p.product_name,
       i.url,
-      s.original_price,s.sell_price,s.sku_name
+      s.original_price,s.sell_price,s.sku_name,s.stock
     from
       shopping_cart c
     inner join product p
