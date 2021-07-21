@@ -1,17 +1,13 @@
 package com.xhh.onlineMall.controller;
 
-import com.xhh.onlineMall.entity.ProductVO;
 import com.xhh.onlineMall.service.CategoryService;
 import com.xhh.onlineMall.service.IndexImgService;
 import com.xhh.onlineMall.service.ProductService;
-import com.xhh.onlineMall.vo.ResStatus;
 import com.xhh.onlineMall.vo.ResultVO;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
-
-import java.util.List;
 
 @RestController
 @CrossOrigin

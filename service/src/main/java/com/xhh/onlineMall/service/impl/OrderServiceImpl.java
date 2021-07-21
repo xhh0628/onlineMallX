@@ -13,13 +13,14 @@ import com.xhh.onlineMall.vo.ResStatus;
 import com.xhh.onlineMall.vo.ResultVO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import tk.mybatis.mapper.entity.Example;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.math.BigDecimal;
+import java.sql.SQLException;
 import java.util.*;
 
 @Service
-public class OrderServiceImpl /*implements OrderService*/ {
+public class OrderServiceImpl implements OrderService {
 
     @Autowired
     private ShoppingCartMapper shoppingCartMapper;
@@ -31,13 +32,13 @@ public class OrderServiceImpl /*implements OrderService*/ {
     private ProductSkuMapper productSkuMapper;
 
     /**
-     *
+     *  保存订单业务，同时成功/失败——spring事务管理
      * @param order 订单对象
      * @param cids 购物车的id
      * @return
      */
-    /*@Override*/
-    public ResultVO addOrder(String cids,Orders order) {
+    @Transactional
+    public ResultVO addOrder(String cids,Orders order) throws SQLException {
         //根据cids查询当前订单中关联的购物车记录详情
         String[] arr=cids.split(",");
         List<Integer> cidsList= new ArrayList<>();
@@ -77,29 +78,33 @@ public class OrderServiceImpl /*implements OrderService*/ {
             //保存订单
             int i=ordersMapper.insert(order);
 
-                //订单保存成功__生产订单快照
-                List<OrderItem> orderItems=new ArrayList<>();
-                for(ShoppingCartVO sc:shoppingCartVOSList){
-                    String itemId=System.currentTimeMillis()+""+(new Random().nextInt(89999)+10000);
-                    OrderItem orderItem = new OrderItem(itemId, orderId, sc.getProductId(),
-                            sc.getProductName(), sc.getProductImg(),
-                            sc.getSkuId(), sc.getSkuName(),  new BigDecimal(sc.getSellPrice()),
-                            Integer.parseInt(sc.getCartNum()), new BigDecimal(sc.getSellPrice() * Integer.parseInt(sc.getCartNum())),
-                            new Date(), new Date(), 0);
-                    orderItems.add(orderItem);
-                }
-                int j = orderItemMapper.insertList(orderItems);
+            //订单保存成功__生成订单快照
+            for(ShoppingCartVO sc:shoppingCartVOSList){
+                String itemId=System.currentTimeMillis()+""+(new Random().nextInt(89999)+10000);
+                OrderItem orderItem = new OrderItem(itemId, orderId, sc.getProductId(),
+                        sc.getProductName(), sc.getProductImg(),
+                        sc.getSkuId(), sc.getSkuName(),  new BigDecimal(sc.getSellPrice()),
+                        Integer.parseInt(sc.getCartNum()), new BigDecimal(sc.getSellPrice() * Integer.parseInt(sc.getCartNum())),
+                        new Date(), new Date(), 0);
+                int insert = orderItemMapper.insert(orderItem);
+            }
 
-                //扣减库存
-                for(ShoppingCartVO sc:shoppingCartVOSList){
-                    String skuId = sc.getSkuId();
-                    int newStock=sc.getSkuStock()- Integer.parseInt(sc.getCartNum());//新库存量=老库存量-购买数量
+            //扣减库存
+            for(ShoppingCartVO sc:shoppingCartVOSList){
+                String skuId = sc.getSkuId();
+                int newStock=sc.getSkuStock()- Integer.parseInt(sc.getCartNum());//新库存量=老库存量-购买数量
 
-                    ProductSku productSku = new ProductSku();
-                    productSku.setSkuId(skuId);
-                    productSku.setStock(newStock);
-                    productSkuMapper.updateByPrimaryKeySelective(productSku);//根据主键修改库存数量
-                }
+                ProductSku productSku = new ProductSku();
+                productSku.setSkuId(skuId);
+                productSku.setStock(newStock);
+                productSkuMapper.updateByPrimaryKeySelective(productSku);//根据主键修改库存数量
+            }
+
+            //删除购物车(遍历购物车id
+            for(int cid:cidsList){
+                shoppingCartMapper.deleteByPrimaryKey(cid);
+            }
+
             return new ResultVO(ResStatus.OK,"下单成功",orderId);
         }else{
             //表示库存不足

@@ -36,10 +36,10 @@ public class ProductController {
     public ResultVO getProductComments(@PathVariable("pid") String pid,int pageNum,int limit){
         return productCommentsService.listCommentsByProductId(pid,pageNum,limit);
     }
-
     @GetMapping("/detail-commentsCount/{pid}")
     @ApiOperation("商品获取评论数和好评率接口")
     public ResultVO getProductCommentsCount(@PathVariable("pid") String pid){
         return productCommentsService.gerCommentsCountByProductId(pid);
     }
+
 }
