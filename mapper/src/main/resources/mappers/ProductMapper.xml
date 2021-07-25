@@ -25,6 +25,19 @@
     <result column="content" property="content" jdbcType="LONGVARCHAR" />
       <collection property="productImgs" select="com.xhh.onlineMall.dao.ProductImgMapper.selectProductImgsByProductId" column="product_id" javaType="java.util.List"/>
   </resultMap>
+
+  <resultMap id="productMapVO" type="com.xhh.onlineMall.entity.ProductVO" >
+    <id column="product_id" property="productId" jdbcType="VARCHAR" />
+    <result column="product_name" property="productName" jdbcType="VARCHAR" />
+    <result column="category_id" property="categoryId" jdbcType="INTEGER" />
+    <result column="root_category_id" property="rootCategoryId" jdbcType="INTEGER" />
+    <result column="sold_num" property="soldNum" jdbcType="INTEGER" />
+    <result column="product_status" property="productStatus" jdbcType="INTEGER" />
+    <result column="create_time" property="createTime" jdbcType="TIMESTAMP" />
+    <result column="update_time" property="updateTime" jdbcType="TIMESTAMP" />
+    <result column="content" property="content" jdbcType="LONGVARCHAR" />
+    <collection property="skus" column="product_id"  select="com.xhh.onlineMall.dao.ProductSkuMapper.selectLowPriceByProductId" javaType="java.util.List"/>
+  </resultMap>
   <sql id="Base_Column_List" >
     product_id, product_name, category_id, root_category_id, sold_num, product_status, 
     create_time, update_time,content
@@ -57,6 +70,15 @@
 
   </select>
 
-
+  <select id="selectProductByCategoryId" resultMap="productMapVO">
+    select
+      product_id, product_name, category_id, root_category_id, sold_num, product_status,
+      create_time, update_time,content
+    from
+      product
+    where
+      category_id=#{categoryId}
+    limit #{start},#{limit}
+  </select>
 
 </mapper>

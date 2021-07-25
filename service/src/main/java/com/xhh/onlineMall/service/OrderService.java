@@ -11,4 +11,6 @@ public interface OrderService {
     Map<String, String> addOrder(String cids, Orders order) throws SQLException;
 
     int updateOrderStatus(String orderId, String status);
+
+    void closeOrder(String orderId);
 }

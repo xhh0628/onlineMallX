@@ -11,7 +11,9 @@ import com.xhh.onlineMall.entity.ShoppingCartVO;
 import com.xhh.onlineMall.service.OrderService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Isolation;
 import org.springframework.transaction.annotation.Transactional;
+import tk.mybatis.mapper.entity.Example;
 
 import java.math.BigDecimal;
 import java.sql.SQLException;
@@ -120,6 +122,32 @@ public class OrderServiceImpl implements OrderService {
         orders.setStatus(status);
         int i = ordersMapper.updateByPrimaryKeySelective(orders);
         return  i;
+    }
+
+    @Override
+    @Transactional(isolation = Isolation.SERIALIZABLE)//事务锁
+    public void closeOrder(String orderId) {
+        synchronized (this){//jvm锁
+            Orders updateOrder=new Orders();
+            updateOrder.setOrderId(orderId);
+            updateOrder.setStatus("6");
+            updateOrder.setCloseType(1);
+            ordersMapper.updateByPrimaryKeySelective(updateOrder);
+            //还原库存
+            Example orderItemExample = new Example(OrderItem.class);
+            Example.Criteria orderItemCriteria = orderItemExample.createCriteria();
+            orderItemCriteria.andEqualTo("orderId",orderId);
+            List<OrderItem> orderItems = orderItemMapper.selectByExample(orderItemExample);//根据商品id，获取商品快照
+            for (int j = 0; j < orderItems.size(); j++) {
+                OrderItem orderItem = orderItems.get(j);
+                //还原库存
+                ProductSku productSku =productSkuMapper.selectByPrimaryKey(orderItem.getSkuId());//查询快照中的套餐，获取现在库存数
+                productSku.setStock(productSku.getStock()+orderItem.getBuyCounts());//现库存+订单快照的购买库存
+                productSku.setSkuId(orderItem.getSkuId());
+                productSkuMapper.updateByPrimaryKey(productSku);
+            }
+        }
+
     }
 
 

@@ -6,6 +6,7 @@ import com.xhh.onlineMall.dao.ProductParamsMapper;
 import com.xhh.onlineMall.dao.ProductSkuMapper;
 import com.xhh.onlineMall.entity.*;
 import com.xhh.onlineMall.service.ProductService;
+import com.xhh.onlineMall.utils.PageHelper;
 import com.xhh.onlineMall.vo.ResStatus;
 import com.xhh.onlineMall.vo.ResultVO;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -28,6 +29,7 @@ public class ProductServiceImpl implements ProductService {
     private ProductSkuMapper productSkuMapper;
     @Autowired
     private ProductParamsMapper productParamsMapper;
+
 
 
     @Override
@@ -79,5 +81,22 @@ public class ProductServiceImpl implements ProductService {
         }else {
             return new ResultVO(ResStatus.NO,"暂无商品信息介绍",null);
         }
+    }
+
+    @Override
+    public ResultVO getProductsByCategoryId(int categoryId, int pageNum, int limit) {
+        //查询分页数据
+        int start  =(pageNum-1)*limit;
+        List<ProductVO> productVOS = productMapper.selectProductByCategoryId(categoryId, start, limit);
+        //查询当前类别下的商品总记录数
+        Example example = new Example(Product.class);
+        Example.Criteria criteria = example.createCriteria();
+        criteria.andEqualTo("categoryId",categoryId);
+        int count = productMapper.selectCountByExample(example);
+        //计算总页数
+        int pageCount=count%limit ==0?count/limit :count/limit+1;
+        //封装返回数据
+        PageHelper<ProductVO> pageHelper = new PageHelper<>(count, pageCount, productVOS);
+        return new ResultVO(ResStatus.OK,"success",pageHelper);
     }
 }

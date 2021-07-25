@@ -42,4 +42,10 @@ public class ProductController {
         return productCommentsService.gerCommentsCountByProductId(pid);
     }
 
+    @GetMapping("/listbycid/{cid}")
+    @ApiOperation("根据类别查询商品接口")
+    public ResultVO getProductCommentsCount(@PathVariable("cid") int cid,int pageNum,int limit){
+        return productService.getProductsByCategoryId(cid,pageNum,limit);
+    }
+
 }

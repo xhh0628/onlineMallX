@@ -10,4 +10,6 @@ public interface ProductService {
     ResultVO getProductBasicInfo(String productId);
 
     ResultVO getProductParamsById(String productId);
+
+    ResultVO getProductsByCategoryId(int categoryId,int pageNum,int limit);
 }

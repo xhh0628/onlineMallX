@@ -18,4 +18,6 @@ public interface ProductSkuMapper extends GeneralDao<ProductSku> {
     int updateByExampleSelective(@Param("record") ProductSku record, @Param("example") ProductSkuExample example);
 
     int updateByExample(@Param("record") ProductSku record, @Param("example") ProductSkuExample example);
+
+    List<ProductSku> selectLowPriceByProductId(String productId);
 }
