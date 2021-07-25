@@ -27,25 +27,38 @@ public class OrderController {
     public ResultVO add(String cids, @RequestBody Orders order){
         ResultVO vo = null;
         try {
-            vo = OrderService.addOrder(cids, order);
-            //申请支付短链接——使用微信
-            //https://api.mch.weixin.qq.com/v3/pay/transactions/native
-            //设置商户信息
-            WXPay wxPay = new WXPay(new MyPayConfig());
-            //设置当前订单信息
-            HashMap<String, String> data = new HashMap<>();
-            data.put("body","虾条");//商品描述
-            data.put("out_trade_no",vo.getData().toString());//交易编号,用户当前订单的编号，作为支付交易的交易号
-            data.put("fee_type","CNY");//支付币种
-            data.put("total_type","1");//支付金额_分为单位
-            data.put("trade_type","NATIVE");//交易类型
-            data.put("notify_url","/pay/success");//设置支付完成时的回调方法接口
-            //发送请求获取相应
-            Map<String, String> resp = wxPay.unifiedOrder(data);//异常向下抛出
-            System.out.println("微信支付结果"+resp);
+            Map<String,String> orderInfo = OrderService.addOrder(cids, order);
+            String orderId=orderInfo.get("orderId");
+            String productNames=orderInfo.get("productNames");
+            if(orderId!=null){
+                //订单保存成功
+                //申请支付短链接——使用微信
+                //访问https://api.mch.weixin.qq.com/v3/pay/transactions/native 注册
+
+                //设置当前订单信息
+                /*HashMap<String, String> data = new HashMap<>();
+                data.put("body",productNames);//商品描述
+                data.put("out_trade_no",orderId);//交易编号,用户当前订单的编号，作为支付交易的交易号
+                data.put("fee_type","CNY");//支付币种
+                data.put("total_fee",order.getActualAmount()*100+"");//支付金额_分为单位
+                data.put("trade_type","NATIVE");//交易类型
+                data.put("notify_url","/pay/success");//设置支付完成时的回调方法接口
+                //设置商户信息
+                WXPay wxPay = new WXPay(new MyPayConfig());
+                //发送请求获取相应
+                Map<String, String> resp = wxPay.unifiedOrder(data);//异常向下抛出
+
+                orderInfo.put("payUrl",resp.get("code_url"));//获取支付短链接*/
+                orderInfo.put("payUrl","lianjie.com");
+                return new ResultVO(ResStatus.OK,"提交订单成功",orderInfo);
+            }else{
+                return new ResultVO(ResStatus.NO,"提交订单失败",null);
+            }
+
+
         } catch (SQLException throwables) {
             throwables.printStackTrace();
-            new ResultVO(ResStatus.NO,"提交订单失败",null);
+            return new ResultVO(ResStatus.NO,"提交订单失败",null);
         } catch (Exception e) {
             e.printStackTrace();
         }

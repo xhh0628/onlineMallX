@@ -9,8 +9,6 @@ import com.xhh.onlineMall.entity.Orders;
 import com.xhh.onlineMall.entity.ProductSku;
 import com.xhh.onlineMall.entity.ShoppingCartVO;
 import com.xhh.onlineMall.service.OrderService;
-import com.xhh.onlineMall.vo.ResStatus;
-import com.xhh.onlineMall.vo.ResultVO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -33,12 +31,13 @@ public class OrderServiceImpl implements OrderService {
 
     /**
      *  保存订单业务，同时成功/失败——spring事务管理
-     * @param order 订单对象
      * @param cids 购物车的id
+     * @param order 订单对象
      * @return
      */
     @Transactional
-    public ResultVO addOrder(String cids,Orders order) throws SQLException {
+    public Map<String, String> addOrder(String cids, Orders order) throws SQLException {
+        Map<String,String> map=new HashMap<>();
         //根据cids查询当前订单中关联的购物车记录详情
         String[] arr=cids.split(",");
         List<Integer> cidsList= new ArrayList<>();
@@ -104,13 +103,23 @@ public class OrderServiceImpl implements OrderService {
             for(int cid:cidsList){
                 shoppingCartMapper.deleteByPrimaryKey(cid);
             }
-
-            return new ResultVO(ResStatus.OK,"下单成功",orderId);
+            map.put("orderId",orderId);
+            map.put("productNames",untitled);
+            return map;
         }else{
             //表示库存不足
-            return new ResultVO(ResStatus.NO,"库存不足，下单失败",null);
+            return null;
         }
 
+    }
+
+    @Override
+    public int updateOrderStatus(String orderId, String status) {
+        Orders orders=new Orders();
+        orders.setOrderId(orderId);
+        orders.setStatus(status);
+        int i = ordersMapper.updateByPrimaryKeySelective(orders);
+        return  i;
     }
 
 
