@@ -81,4 +81,15 @@
     limit #{start},#{limit}
   </select>
 
+  <select id="selectBrandByCategoryId" parameterType="int" resultType="string" resultSets="java.util.List">
+    select distinct
+        brand
+    from
+        product_params
+    where
+      product_id
+    in (select product_id from product where category_id=#{categoryId})
+
+  </select>
+
 </mapper>

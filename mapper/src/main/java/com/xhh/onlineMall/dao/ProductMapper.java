@@ -33,4 +33,6 @@ public interface ProductMapper extends GeneralDao<Product> {
     List<ProductVO> selectProductByCategoryId(@Param("categoryId")int categoryId,
                                             @Param("start")int start,
                                             @Param("limit")int limit);
+
+    List<String> selectBrandByCategoryId(int categoryId);
 }

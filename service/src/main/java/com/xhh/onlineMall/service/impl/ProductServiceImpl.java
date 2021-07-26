@@ -99,4 +99,11 @@ public class ProductServiceImpl implements ProductService {
         PageHelper<ProductVO> pageHelper = new PageHelper<>(count, pageCount, productVOS);
         return new ResultVO(ResStatus.OK,"success",pageHelper);
     }
+
+
+    @Override
+    public ResultVO listBrands(int categoryId) {
+        List<String> strings = productMapper.selectBrandByCategoryId(categoryId);
+        return new ResultVO(ResStatus.OK,"success",strings);
+    }
 }

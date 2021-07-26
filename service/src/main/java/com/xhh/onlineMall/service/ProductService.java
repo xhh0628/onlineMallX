@@ -12,4 +12,6 @@ public interface ProductService {
     ResultVO getProductParamsById(String productId);
 
     ResultVO getProductsByCategoryId(int categoryId,int pageNum,int limit);
+
+    ResultVO listBrands(int categoryId);
 }

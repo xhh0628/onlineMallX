@@ -44,8 +44,14 @@ public class ProductController {
 
     @GetMapping("/listbycid/{cid}")
     @ApiOperation("根据类别查询商品接口")
-    public ResultVO getProductCommentsCount(@PathVariable("cid") int cid,int pageNum,int limit){
+    public ResultVO getProductsByCategoryId(@PathVariable("cid") int cid,int pageNum,int limit){
         return productService.getProductsByCategoryId(cid,pageNum,limit);
+    }
+
+    @GetMapping("/listbrands/{cid}")
+    @ApiOperation("根据类别查询该类别下商品品牌")
+    public ResultVO getBrandsByCategoryId(@PathVariable("cid") int cid){
+        return productService.listBrands(cid);
     }
 
 }
