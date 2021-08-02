@@ -85,6 +85,10 @@ public class OrderItem {
     @Column(name = "is_comment")
     private Integer isComment;
 
+    public OrderItem() {
+
+    }
+
     /**
      * 获取订单项ID
      *

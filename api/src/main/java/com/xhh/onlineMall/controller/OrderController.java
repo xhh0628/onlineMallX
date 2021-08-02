@@ -7,6 +7,7 @@ import com.xhh.onlineMall.service.OrderService;
 import com.xhh.onlineMall.vo.ResStatus;
 import com.xhh.onlineMall.vo.ResultVO;
 import io.swagger.annotations.Api;
+import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -24,6 +25,7 @@ public class OrderController {
     private OrderService OrderService;
 
     @PostMapping("/add")
+    @ApiOperation("添加订单")
     public ResultVO add(String cids, @RequestBody Orders order){
         ResultVO vo = null;
         try {
@@ -65,5 +67,24 @@ public class OrderController {
         return vo;
     }
 
+    /**
+     * 根据条件查询订单
+     * @param token
+     * @param userId
+     * @param status
+     * @param pageNum
+     * @param limit
+     * @return
+     */
+    @GetMapping("/list")
+    @ApiOperation("根据条件查询订单")
+    public ResultVO list(@RequestHeader("token")String token,
+                         String userId,
+                         String status,
+                         int pageNum,
+                         int limit){
+        ResultVO vo = OrderService.listOrders(userId,status,pageNum,limit);
+        return vo;
+    }
 
 }

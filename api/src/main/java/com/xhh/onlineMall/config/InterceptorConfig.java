@@ -27,7 +27,8 @@ public class InterceptorConfig implements WebMvcConfigurer {
                 .addPathPatterns("/shopcart/**")//受限
                 .addPathPatterns("/orders/**")//受限
                 .addPathPatterns("/useraddr/**")
-                .excludePathPatterns("user/**");//忽略
+                .addPathPatterns("user/tokenCheck");
+               /* .excludePathPatterns("user/**");//忽略*/
 
     }
 }

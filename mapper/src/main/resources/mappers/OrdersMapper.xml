@@ -26,12 +26,71 @@
     <result column="close_type" property="closeType" jdbcType="INTEGER" />
   </resultMap>
 
+  <resultMap id="OrdersVOMap" type="com.xhh.onlineMall.entity.OrdersVO" >
+    <id column="order_id" property="orderId" jdbcType="VARCHAR" />
+    <result column="user_id" property="userId" jdbcType="VARCHAR" />
+    <result column="untitled" property="untitled" jdbcType="VARCHAR" />
+    <result column="receiver_name" property="receiverName" jdbcType="VARCHAR" />
+    <result column="receiver_mobile" property="receiverMobile" jdbcType="VARCHAR" />
+    <result column="receiver_address" property="receiverAddress" jdbcType="VARCHAR" />
+    <result column="total_amount" property="totalAmount" jdbcType="DECIMAL" />
+    <result column="actual_amount" property="actualAmount" jdbcType="INTEGER" />
+    <result column="pay_type" property="payType" jdbcType="INTEGER" />
+    <result column="order_remark" property="orderRemark" jdbcType="VARCHAR" />
+    <result column="status" property="status" jdbcType="VARCHAR" />
+    <result column="delivery_type" property="deliveryType" jdbcType="VARCHAR" />
+    <result column="delivery_flow_id" property="deliveryFlowId" jdbcType="VARCHAR" />
+    <result column="order_freight" property="orderFreight" jdbcType="DECIMAL" />
+    <result column="delete_status" property="deleteStatus" jdbcType="INTEGER" />
+    <result column="create_time" property="createTime" jdbcType="TIMESTAMP" />
+    <result column="update_time" property="updateTime" jdbcType="TIMESTAMP" />
+    <result column="pay_time" property="payTime" jdbcType="TIMESTAMP" />
+    <result column="delivery_time" property="deliveryTime" jdbcType="TIMESTAMP" />
+    <result column="flish_time" property="flishTime" jdbcType="TIMESTAMP" />
+    <result column="cancel_time" property="cancelTime" jdbcType="TIMESTAMP" />
+    <result column="close_type" property="closeType" jdbcType="INTEGER" />
+    <collection property="orderItems" ofType="com.xhh.onlineMall.entity.OrderItem" >
+      <result column="item_id" property="itemId" jdbcType="VARCHAR" />
+      <result column="item_order_id" property="orderId" jdbcType="VARCHAR" />
+      <result column="product_id" property="productId" jdbcType="VARCHAR" />
+      <result column="product_name" property="productName" jdbcType="VARCHAR" />
+      <result column="product_img" property="productImg" jdbcType="VARCHAR" />
+      <result column="sku_id" property="skuId" jdbcType="VARCHAR" />
+      <result column="sku_name" property="skuName" jdbcType="VARCHAR" />
+      <result column="product_price" property="productPrice" jdbcType="DECIMAL" />
+      <result column="buy_counts" property="buyCounts" jdbcType="INTEGER" />
+      <result column="item_total_amount" property="totalAmount" jdbcType="DECIMAL" />
+      <result column="basket_date" property="basketDate" jdbcType="TIMESTAMP" />
+      <result column="buy_time" property="buyTime" jdbcType="TIMESTAMP" />
+      <result column="is_comment" property="isComment" jdbcType="INTEGER" />
+    </collection>
+  </resultMap>
+
   <sql id="Base_Column_List" >
     order_id, user_id, untitled, receiver_name, receiver_mobile, receiver_address, total_amount, 
     actual_amount, pay_type, order_remark, status, delivery_type, delivery_flow_id, order_freight, 
     delete_status, create_time, update_time, pay_time, delivery_time, flish_time, cancel_time, 
     close_type
   </sql>
+
+  <select id="selectOrders" resultMap="OrdersVOMap">
+    select
+    o.order_id, o.user_id, o.untitled, o.receiver_name, o.receiver_mobile, o.receiver_address, o.total_amount,
+    o.actual_amount, o.pay_type, o.order_remark, o.status, o.delivery_type, o.delivery_flow_id, o.order_freight,
+    o.delete_status, o.create_time, o.update_time, o.pay_time, o.delivery_time, o.flish_time, o.cancel_time,
+    o.close_type,
+    i.item_id, i.order_id as item_order_id, i.product_id, i.product_name, i.product_img, i.sku_id, i.sku_name, i.product_price,
+    i.buy_counts, i.total_amount as item_total_amount, i.basket_date, i.buy_time, i.is_comment
+    from
+      orders o inner join order_item i
+    on o.order_id=i.order_id
+    where
+    o.user_id=#{userId}
+    <if test="status!=null">
+      and o.status=#{status}
+    </if>
+    limit #{start},#{limit}
+  </select>
 
 
 

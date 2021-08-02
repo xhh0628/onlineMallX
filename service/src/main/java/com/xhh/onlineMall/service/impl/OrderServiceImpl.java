@@ -4,11 +4,11 @@ import com.xhh.onlineMall.dao.OrderItemMapper;
 import com.xhh.onlineMall.dao.OrdersMapper;
 import com.xhh.onlineMall.dao.ProductSkuMapper;
 import com.xhh.onlineMall.dao.ShoppingCartMapper;
-import com.xhh.onlineMall.entity.OrderItem;
-import com.xhh.onlineMall.entity.Orders;
-import com.xhh.onlineMall.entity.ProductSku;
-import com.xhh.onlineMall.entity.ShoppingCartVO;
+import com.xhh.onlineMall.entity.*;
 import com.xhh.onlineMall.service.OrderService;
+import com.xhh.onlineMall.utils.PageHelper;
+import com.xhh.onlineMall.vo.ResStatus;
+import com.xhh.onlineMall.vo.ResultVO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Isolation;
@@ -148,6 +148,35 @@ public class OrderServiceImpl implements OrderService {
             }
         }
 
+    }
+
+    /**
+     * 个人中心按条件查询订单
+     * @param userId 当前登陆人
+     * @param status 订单状态
+     * @param pageNum 分页参数
+     * @param limit 分页参数
+     * @return
+     */
+    @Override
+    public ResultVO listOrders(String userId, String status, int pageNum, int limit) {
+
+        //分页查询
+        int start=(pageNum-1)*limit;
+        List<OrdersVO> ordersVOS = ordersMapper.selectOrders(userId, status, start, limit);
+        //查询总记录数
+        Example example = new Example(Orders.class);
+        Example.Criteria criteria = example.createCriteria();
+        criteria.andEqualTo("userId",userId);
+        if (status !=null && !"".equals(status)){
+            criteria.andEqualTo("status",status);
+        }
+        int count = ordersMapper.selectCountByExample(example);
+        //计算总页数
+        int pageCount= count%limit ==0?count/limit : count/limit +1 ;
+        //封装数据
+        PageHelper<OrdersVO> ordersVOPageHelper = new PageHelper<>(count, pageCount, ordersVOS);
+        return new ResultVO(ResStatus.OK,"success",ordersVOPageHelper);
     }
 
 

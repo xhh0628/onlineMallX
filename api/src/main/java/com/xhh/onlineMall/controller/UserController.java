@@ -3,6 +3,7 @@ package com.xhh.onlineMall.controller;
 
 import com.xhh.onlineMall.entity.Users;
 import com.xhh.onlineMall.service.UserService;
+import com.xhh.onlineMall.vo.ResStatus;
 import com.xhh.onlineMall.vo.ResultVO;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
@@ -37,6 +38,18 @@ public class UserController {
     public ResultVO regist(@RequestBody Users user){
         ResultVO vo=userService.userResgit(user.getUsername(),user.getPassword());
         return vo;
+    }
+
+    /**
+     * 借助拦截器，校验token是否过期
+     * @param token
+     * @return
+     */
+    @GetMapping(value = "/tokenCheck")
+    @ApiOperation("token校验是否过期接口")
+    public ResultVO userTokenCheck(@RequestHeader("token")String token){
+
+        return  new ResultVO(ResStatus.OK,"success",null);
     }
 
 }
