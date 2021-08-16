@@ -16,6 +16,7 @@ import org.springframework.transaction.annotation.Transactional;
 import tk.mybatis.mapper.entity.Example;
 
 import java.math.BigDecimal;
+import java.net.URL;
 import java.sql.SQLException;
 import java.util.*;
 
@@ -122,6 +123,7 @@ public class OrderServiceImpl implements OrderService {
         orders.setStatus(status);
         int i = ordersMapper.updateByPrimaryKeySelective(orders);
         return  i;
+        
     }
 
     @Override
@@ -160,7 +162,7 @@ public class OrderServiceImpl implements OrderService {
      */
     @Override
     public ResultVO listOrders(String userId, String status, int pageNum, int limit) {
-
+        
         //分页查询
         int start=(pageNum-1)*limit;
         List<OrdersVO> ordersVOS = ordersMapper.selectOrders(userId, status, start, limit);
@@ -168,6 +170,7 @@ public class OrderServiceImpl implements OrderService {
         Example example = new Example(Orders.class);
         Example.Criteria criteria = example.createCriteria();
         criteria.andEqualTo("userId",userId);
+
         if (status !=null && !"".equals(status)){
             criteria.andEqualTo("status",status);
         }

@@ -1,0 +1,17 @@
+com\xhh\onlineMall\service\impl\ProductCommentsServiceImpl.class
+com\xhh\onlineMall\service\IndexImgService.class
+com\xhh\onlineMall\service\impl\ShoppingCartServiceImpl.class
+com\xhh\onlineMall\service\CategoryService.class
+com\xhh\onlineMall\service\impl\CategoryServiceImpl.class
+com\xhh\onlineMall\service\ProductService.class
+com\xhh\onlineMall\service\impl\OrderServiceImpl.class
+com\xhh\onlineMall\service\impl\UserServiceImpl.class
+com\xhh\onlineMall\service\OrderService.class
+com\xhh\onlineMall\service\UserService.class
+com\xhh\onlineMall\service\impl\UserAddrServiceImpl.class
+com\xhh\onlineMall\service\ShoppingCartService.class
+com\xhh\onlineMall\service\UserAddrService.class
+com\xhh\onlineMall\service\ProductCommentsService.class
+com\xhh\onlineMall\service\timeJob\OrderTimeoutCheck.class
+com\xhh\onlineMall\service\impl\IndexImgServiceImpl.class
+com\xhh\onlineMall\service\impl\ProductServiceImpl.class

@@ -1,0 +1,58 @@
+2021-08-16-21:15:28.272INFO [main]-org.springframework.boot.StartupInfoLogger:55 >> Starting ApiApplication using Java 1.8.0_131 on DESKTOP-OEKQMMV with PID 12844 (D:\DevelopmentTool\ide\ideaWorkSpace2\onlineMallX\api\target\classes started by user in D:\DevelopmentTool\ide\ideaWorkSpace2\onlineMallX)
+2021-08-16-21:15:28.274INFO [main]-org.springframework.boot.SpringApplication:660 >> No active profile set, falling back to default profiles: default
+2021-08-16-21:15:28.892WARN [main]-org.mybatis.logging.Logger:44 >> No MyBatis mapper was found in '[com.xhh]' package. Please check your configuration.
+2021-08-16-21:15:29.019ERROR [main]-org.apache.juli.logging.DirectJDKLog:173 >> An incompatible version [1.1.24] of the Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2021-08-16-21:15:29.158INFO [main]-org.springframework.boot.web.embedded.tomcat.TomcatWebServer:108 >> Tomcat initialized with port(s): 8080 (http)
+2021-08-16-21:15:29.164INFO [main]-org.apache.juli.logging.DirectJDKLog:173 >> Initializing ProtocolHandler ["http-nio-8080"]
+2021-08-16-21:15:29.165INFO [main]-org.apache.juli.logging.DirectJDKLog:173 >> Starting service [Tomcat]
+2021-08-16-21:15:29.165INFO [main]-org.apache.juli.logging.DirectJDKLog:173 >> Starting Servlet engine: [Apache Tomcat/9.0.41]
+2021-08-16-21:15:29.218INFO [main]-org.apache.juli.logging.DirectJDKLog:173 >> Initializing Spring embedded WebApplicationContext
+2021-08-16-21:15:29.219INFO [main]-org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext:289 >> Root WebApplicationContext: initialization completed in 913 ms
+2021-08-16-21:15:29.272INFO [main]-com.alibaba.druid.spring.boot.autoconfigure.DruidDataSourceAutoConfigure:56 >> Init DruidDataSource
+2021-08-16-21:15:29.343INFO [main]-com.alibaba.druid.pool.DruidDataSource:994 >> {dataSource-1} inited
+2021-08-16-21:15:30.148INFO [main]-springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping:69 >> Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2021-08-16-21:15:30.211INFO [main]-org.springframework.scheduling.concurrent.ExecutorConfigurationSupport:181 >> Initializing ExecutorService 'applicationTaskExecutor'
+2021-08-16-21:15:30.289INFO [main]-tk.mybatis.mapper.autoconfigure.MapperCacheDisabler:60 >> Clear tk.mybatis.mapper.util.MsUtil CLASS_CACHE cache.
+2021-08-16-21:15:30.290INFO [main]-tk.mybatis.mapper.autoconfigure.MapperCacheDisabler:60 >> Clear tk.mybatis.mapper.genid.GenIdUtil CACHE cache.
+2021-08-16-21:15:30.290INFO [main]-tk.mybatis.mapper.autoconfigure.MapperCacheDisabler:60 >> Clear tk.mybatis.mapper.version.VersionUtil CACHE cache.
+2021-08-16-21:15:30.290INFO [main]-tk.mybatis.mapper.autoconfigure.MapperCacheDisabler:83 >> Clear EntityHelper entityTableMap cache.
+2021-08-16-21:15:30.325INFO [main]-org.quartz.impl.StdSchedulerFactory:1220 >> Using default implementation for ThreadExecutor
+2021-08-16-21:15:30.332INFO [main]-org.quartz.core.SchedulerSignalerImpl:61 >> Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2021-08-16-21:15:30.332INFO [main]-org.quartz.core.QuartzScheduler:229 >> Quartz Scheduler v.2.3.2 created.
+2021-08-16-21:15:30.332INFO [main]-org.quartz.simpl.RAMJobStore:155 >> RAMJobStore initialized.
+2021-08-16-21:15:30.333INFO [main]-org.quartz.core.QuartzScheduler:294 >> Scheduler meta-data: Quartz Scheduler (v2.3.2) 'quartzScheduler' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+2021-08-16-21:15:30.333INFO [main]-org.quartz.impl.StdSchedulerFactory:1374 >> Quartz scheduler 'quartzScheduler' initialized from an externally provided properties instance.
+2021-08-16-21:15:30.333INFO [main]-org.quartz.impl.StdSchedulerFactory:1378 >> Quartz scheduler version: 2.3.2
+2021-08-16-21:15:30.333INFO [main]-org.quartz.core.QuartzScheduler:2293 >> JobFactory set to: org.springframework.scheduling.quartz.SpringBeanJobFactory@1f71e024
+2021-08-16-21:15:30.337INFO [main]-org.springframework.scheduling.concurrent.ExecutorConfigurationSupport:181 >> Initializing ExecutorService 'taskScheduler'
+2021-08-16-21:15:30.372INFO [main]-org.apache.juli.logging.DirectJDKLog:173 >> Starting ProtocolHandler ["http-nio-8080"]
+2021-08-16-21:15:30.387INFO [main]-org.springframework.boot.web.embedded.tomcat.TomcatWebServer:220 >> Tomcat started on port(s): 8080 (http) with context path ''
+2021-08-16-21:15:30.388INFO [main]-springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper:160 >> Context refreshed
+2021-08-16-21:15:30.400INFO [main]-springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper:163 >> Found 1 custom documentation plugin(s)
+2021-08-16-21:15:30.423INFO [main]-springfox.documentation.spring.web.scanners.ApiListingReferenceScanner:41 >> Scanning for api listing references
+2021-08-16-21:15:30.526INFO [main]-springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator:40 >> Generating unique operation named: listUsingGET_1
+2021-08-16-21:15:30.529INFO [main]-springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator:40 >> Generating unique operation named: getProductCommentsCountUsingGET_1
+2021-08-16-21:15:30.541INFO [main]-org.springframework.scheduling.quartz.SchedulerFactoryBean:727 >> Starting Quartz Scheduler now
+2021-08-16-21:15:30.541INFO [main]-org.quartz.core.QuartzScheduler:547 >> Scheduler quartzScheduler_$_NON_CLUSTERED started.
+2021-08-16-21:15:30.550INFO [main]-org.springframework.boot.StartupInfoLogger:61 >> Started ApiApplication in 2.64 seconds (JVM running for 3.181)
+2021-08-16-21:15:45.971INFO [http-nio-8080-exec-1]-org.apache.juli.logging.DirectJDKLog:173 >> Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-08-16-21:15:45.972INFO [http-nio-8080-exec-1]-org.springframework.web.servlet.FrameworkServlet:525 >> Initializing Servlet 'dispatcherServlet'
+2021-08-16-21:15:45.972INFO [http-nio-8080-exec-1]-org.springframework.web.servlet.FrameworkServlet:547 >> Completed initialization in 0 ms
+2021-08-16-21:15:45.996INFO [http-nio-8080-exec-4]-com.xhh.onlineMall.service.impl.IndexImgServiceImpl:25 >> 加载首页开始+++++++
+2021-08-16-21:15:46.004INFO [http-nio-8080-exec-4]-com.xhh.onlineMall.service.impl.IndexImgServiceImpl:30 >> 加载首页成功-------
+2021-08-16-21:15:59.998INFO [SpringContextShutdownHook]-org.quartz.core.QuartzScheduler:585 >> Scheduler quartzScheduler_$_NON_CLUSTERED paused.
+2021-08-16-21:16:00.091INFO [SpringContextShutdownHook]-org.springframework.scheduling.concurrent.ExecutorConfigurationSupport:218 >> Shutting down ExecutorService 'taskScheduler'
+2021-08-16-21:16:00.091INFO [SpringContextShutdownHook]-org.springframework.scheduling.quartz.SchedulerFactoryBean:845 >> Shutting down Quartz Scheduler
+2021-08-16-21:16:00.091INFO [SpringContextShutdownHook]-org.quartz.core.QuartzScheduler:666 >> Scheduler quartzScheduler_$_NON_CLUSTERED shutting down.
+2021-08-16-21:16:00.091INFO [SpringContextShutdownHook]-org.quartz.core.QuartzScheduler:585 >> Scheduler quartzScheduler_$_NON_CLUSTERED paused.
+2021-08-16-21:16:00.091INFO [SpringContextShutdownHook]-org.quartz.core.QuartzScheduler:740 >> Scheduler quartzScheduler_$_NON_CLUSTERED shutdown complete.
+2021-08-16-21:16:00.092INFO [SpringContextShutdownHook]-org.springframework.scheduling.concurrent.ExecutorConfigurationSupport:218 >> Shutting down ExecutorService 'applicationTaskExecutor'
+2021-08-16-21:16:00.093INFO [SpringContextShutdownHook]-com.alibaba.druid.pool.DruidDataSource:2029 >> {dataSource-1} closing ...
+2021-08-16-21:16:00.098INFO [SpringContextShutdownHook]-com.alibaba.druid.pool.DruidDataSource:2101 >> {dataSource-1} closed
