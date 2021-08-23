@@ -1,0 +1,727 @@
+2021-08-23-21:46:17.135INFO [main]-org.springframework.boot.StartupInfoLogger:55 >> Starting ApiApplication using Java 1.8.0_131 on DESKTOP-OEKQMMV with PID 12136 (D:\DevelopmentTool\ide\ideaWorkSpace2\onlineMallX\api\target\classes started by user in D:\DevelopmentTool\ide\ideaWorkSpace2\onlineMallX)
+2021-08-23-21:46:17.137INFO [main]-org.springframework.boot.SpringApplication:660 >> No active profile set, falling back to default profiles: default
+2021-08-23-21:46:17.807INFO [main]-org.springframework.data.repository.config.RepositoryConfigurationDelegate:250 >> Multiple Spring Data modules found, entering strict repository configuration mode!
+2021-08-23-21:46:17.809INFO [main]-org.springframework.data.repository.config.RepositoryConfigurationDelegate:128 >> Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2021-08-23-21:46:17.841INFO [main]-org.springframework.data.repository.config.RepositoryConfigurationDelegate:188 >> Finished Spring Data repository scanning in 21 ms. Found 0 Redis repository interfaces.
+2021-08-23-21:46:17.936WARN [main]-org.mybatis.logging.Logger:44 >> No MyBatis mapper was found in '[com.xhh]' package. Please check your configuration.
+2021-08-23-21:46:18.107ERROR [main]-org.apache.juli.logging.DirectJDKLog:173 >> An incompatible version [1.1.24] of the Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2021-08-23-21:46:18.251INFO [main]-org.springframework.boot.web.embedded.tomcat.TomcatWebServer:108 >> Tomcat initialized with port(s): 8080 (http)
+2021-08-23-21:46:18.257INFO [main]-org.apache.juli.logging.DirectJDKLog:173 >> Initializing ProtocolHandler ["http-nio-8080"]
+2021-08-23-21:46:18.257INFO [main]-org.apache.juli.logging.DirectJDKLog:173 >> Starting service [Tomcat]
+2021-08-23-21:46:18.258INFO [main]-org.apache.juli.logging.DirectJDKLog:173 >> Starting Servlet engine: [Apache Tomcat/9.0.41]
+2021-08-23-21:46:18.321INFO [main]-org.apache.juli.logging.DirectJDKLog:173 >> Initializing Spring embedded WebApplicationContext
+2021-08-23-21:46:18.322INFO [main]-org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext:289 >> Root WebApplicationContext: initialization completed in 1150 ms
+2021-08-23-21:46:18.380INFO [main]-com.alibaba.druid.spring.boot.autoconfigure.DruidDataSourceAutoConfigure:56 >> Init DruidDataSource
+2021-08-23-21:46:18.467INFO [main]-com.alibaba.druid.pool.DruidDataSource:994 >> {dataSource-1} inited
+2021-08-23-21:46:19.368INFO [main]-springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping:69 >> Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2021-08-23-21:46:19.433INFO [main]-org.springframework.scheduling.concurrent.ExecutorConfigurationSupport:181 >> Initializing ExecutorService 'applicationTaskExecutor'
+2021-08-23-21:46:19.519INFO [main]-tk.mybatis.mapper.autoconfigure.MapperCacheDisabler:60 >> Clear tk.mybatis.mapper.util.MsUtil CLASS_CACHE cache.
+2021-08-23-21:46:19.520INFO [main]-tk.mybatis.mapper.autoconfigure.MapperCacheDisabler:60 >> Clear tk.mybatis.mapper.genid.GenIdUtil CACHE cache.
+2021-08-23-21:46:19.520INFO [main]-tk.mybatis.mapper.autoconfigure.MapperCacheDisabler:60 >> Clear tk.mybatis.mapper.version.VersionUtil CACHE cache.
+2021-08-23-21:46:19.520INFO [main]-tk.mybatis.mapper.autoconfigure.MapperCacheDisabler:83 >> Clear EntityHelper entityTableMap cache.
+2021-08-23-21:46:19.784INFO [main]-org.quartz.impl.StdSchedulerFactory:1220 >> Using default implementation for ThreadExecutor
+2021-08-23-21:46:19.793INFO [main]-org.quartz.core.SchedulerSignalerImpl:61 >> Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2021-08-23-21:46:19.793INFO [main]-org.quartz.core.QuartzScheduler:229 >> Quartz Scheduler v.2.3.2 created.
+2021-08-23-21:46:19.794INFO [main]-org.quartz.simpl.RAMJobStore:155 >> RAMJobStore initialized.
+2021-08-23-21:46:19.794INFO [main]-org.quartz.core.QuartzScheduler:294 >> Scheduler meta-data: Quartz Scheduler (v2.3.2) 'quartzScheduler' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+2021-08-23-21:46:19.794INFO [main]-org.quartz.impl.StdSchedulerFactory:1374 >> Quartz scheduler 'quartzScheduler' initialized from an externally provided properties instance.
+2021-08-23-21:46:19.794INFO [main]-org.quartz.impl.StdSchedulerFactory:1378 >> Quartz scheduler version: 2.3.2
+2021-08-23-21:46:19.794INFO [main]-org.quartz.core.QuartzScheduler:2293 >> JobFactory set to: org.springframework.scheduling.quartz.SpringBeanJobFactory@fee7ca
+2021-08-23-21:46:19.798INFO [main]-org.springframework.scheduling.concurrent.ExecutorConfigurationSupport:181 >> Initializing ExecutorService 'taskScheduler'
+2021-08-23-21:46:19.834INFO [main]-org.apache.juli.logging.DirectJDKLog:173 >> Starting ProtocolHandler ["http-nio-8080"]
+2021-08-23-21:46:19.850INFO [main]-org.springframework.boot.web.embedded.tomcat.TomcatWebServer:220 >> Tomcat started on port(s): 8080 (http) with context path ''
+2021-08-23-21:46:19.850INFO [main]-springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper:160 >> Context refreshed
+2021-08-23-21:46:19.866INFO [main]-springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper:163 >> Found 1 custom documentation plugin(s)
+2021-08-23-21:46:19.891INFO [main]-springfox.documentation.spring.web.scanners.ApiListingReferenceScanner:41 >> Scanning for api listing references
+2021-08-23-21:46:20.002INFO [main]-springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator:40 >> Generating unique operation named: listUsingGET_1
+2021-08-23-21:46:20.006INFO [main]-springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator:40 >> Generating unique operation named: getProductCommentsCountUsingGET_1
+2021-08-23-21:46:20.019INFO [main]-org.springframework.scheduling.quartz.SchedulerFactoryBean:727 >> Starting Quartz Scheduler now
+2021-08-23-21:46:20.019INFO [main]-org.quartz.core.QuartzScheduler:547 >> Scheduler quartzScheduler_$_NON_CLUSTERED started.
+2021-08-23-21:46:20.029INFO [main]-org.springframework.boot.StartupInfoLogger:61 >> Started ApiApplication in 3.251 seconds (JVM running for 4.616)
+2021-08-23-21:46:24.066INFO [SpringContextShutdownHook]-org.quartz.core.QuartzScheduler:585 >> Scheduler quartzScheduler_$_NON_CLUSTERED paused.
+2021-08-23-21:46:24.156INFO [SpringContextShutdownHook]-org.springframework.scheduling.concurrent.ExecutorConfigurationSupport:218 >> Shutting down ExecutorService 'taskScheduler'
+2021-08-23-21:46:24.157INFO [SpringContextShutdownHook]-org.springframework.scheduling.quartz.SchedulerFactoryBean:845 >> Shutting down Quartz Scheduler
+2021-08-23-21:46:24.157INFO [SpringContextShutdownHook]-org.quartz.core.QuartzScheduler:666 >> Scheduler quartzScheduler_$_NON_CLUSTERED shutting down.
+2021-08-23-21:46:24.157INFO [SpringContextShutdownHook]-org.quartz.core.QuartzScheduler:585 >> Scheduler quartzScheduler_$_NON_CLUSTERED paused.
+2021-08-23-21:46:24.157INFO [SpringContextShutdownHook]-org.quartz.core.QuartzScheduler:740 >> Scheduler quartzScheduler_$_NON_CLUSTERED shutdown complete.
+2021-08-23-21:46:24.171INFO [SpringContextShutdownHook]-org.springframework.scheduling.concurrent.ExecutorConfigurationSupport:218 >> Shutting down ExecutorService 'applicationTaskExecutor'
+2021-08-23-21:46:24.173INFO [SpringContextShutdownHook]-com.alibaba.druid.pool.DruidDataSource:2029 >> {dataSource-1} closing ...
+2021-08-23-21:46:24.174INFO [SpringContextShutdownHook]-com.alibaba.druid.pool.DruidDataSource:2101 >> {dataSource-1} closed
+2021-08-23-22:24:17.797INFO [main]-org.springframework.boot.StartupInfoLogger:55 >> Starting ApiApplication using Java 1.8.0_131 on DESKTOP-OEKQMMV with PID 6624 (D:\DevelopmentTool\ide\ideaWorkSpace2\onlineMallX\api\target\classes started by user in D:\DevelopmentTool\ide\ideaWorkSpace2\onlineMallX)
+2021-08-23-22:24:17.800INFO [main]-org.springframework.boot.SpringApplication:660 >> No active profile set, falling back to default profiles: default
+2021-08-23-22:24:18.475INFO [main]-org.springframework.data.repository.config.RepositoryConfigurationDelegate:250 >> Multiple Spring Data modules found, entering strict repository configuration mode!
+2021-08-23-22:24:18.476INFO [main]-org.springframework.data.repository.config.RepositoryConfigurationDelegate:128 >> Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2021-08-23-22:24:18.511INFO [main]-org.springframework.data.repository.config.RepositoryConfigurationDelegate:188 >> Finished Spring Data repository scanning in 22 ms. Found 0 Redis repository interfaces.
+2021-08-23-22:24:18.606WARN [main]-org.mybatis.logging.Logger:44 >> No MyBatis mapper was found in '[com.xhh]' package. Please check your configuration.
+2021-08-23-22:24:18.770ERROR [main]-org.apache.juli.logging.DirectJDKLog:173 >> An incompatible version [1.1.24] of the Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2021-08-23-22:24:18.906INFO [main]-org.springframework.boot.web.embedded.tomcat.TomcatWebServer:108 >> Tomcat initialized with port(s): 8080 (http)
+2021-08-23-22:24:18.913INFO [main]-org.apache.juli.logging.DirectJDKLog:173 >> Initializing ProtocolHandler ["http-nio-8080"]
+2021-08-23-22:24:18.914INFO [main]-org.apache.juli.logging.DirectJDKLog:173 >> Starting service [Tomcat]
+2021-08-23-22:24:18.914INFO [main]-org.apache.juli.logging.DirectJDKLog:173 >> Starting Servlet engine: [Apache Tomcat/9.0.41]
+2021-08-23-22:24:18.974INFO [main]-org.apache.juli.logging.DirectJDKLog:173 >> Initializing Spring embedded WebApplicationContext
+2021-08-23-22:24:18.974INFO [main]-org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext:289 >> Root WebApplicationContext: initialization completed in 1141 ms
+2021-08-23-22:24:19.036INFO [main]-com.alibaba.druid.spring.boot.autoconfigure.DruidDataSourceAutoConfigure:56 >> Init DruidDataSource
+2021-08-23-22:24:19.117INFO [main]-com.alibaba.druid.pool.DruidDataSource:994 >> {dataSource-1} inited
+2021-08-23-22:24:20.186INFO [main]-springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping:69 >> Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2021-08-23-22:24:20.259INFO [main]-org.springframework.scheduling.concurrent.ExecutorConfigurationSupport:181 >> Initializing ExecutorService 'applicationTaskExecutor'
+2021-08-23-22:24:20.354INFO [main]-tk.mybatis.mapper.autoconfigure.MapperCacheDisabler:60 >> Clear tk.mybatis.mapper.util.MsUtil CLASS_CACHE cache.
+2021-08-23-22:24:20.355INFO [main]-tk.mybatis.mapper.autoconfigure.MapperCacheDisabler:60 >> Clear tk.mybatis.mapper.genid.GenIdUtil CACHE cache.
+2021-08-23-22:24:20.355INFO [main]-tk.mybatis.mapper.autoconfigure.MapperCacheDisabler:60 >> Clear tk.mybatis.mapper.version.VersionUtil CACHE cache.
+2021-08-23-22:24:20.356INFO [main]-tk.mybatis.mapper.autoconfigure.MapperCacheDisabler:83 >> Clear EntityHelper entityTableMap cache.
+2021-08-23-22:24:20.452INFO [main]-org.quartz.impl.StdSchedulerFactory:1220 >> Using default implementation for ThreadExecutor
+2021-08-23-22:24:20.461INFO [main]-org.quartz.core.SchedulerSignalerImpl:61 >> Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2021-08-23-22:24:20.462INFO [main]-org.quartz.core.QuartzScheduler:229 >> Quartz Scheduler v.2.3.2 created.
+2021-08-23-22:24:20.462INFO [main]-org.quartz.simpl.RAMJobStore:155 >> RAMJobStore initialized.
+2021-08-23-22:24:20.463INFO [main]-org.quartz.core.QuartzScheduler:294 >> Scheduler meta-data: Quartz Scheduler (v2.3.2) 'quartzScheduler' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+2021-08-23-22:24:20.463INFO [main]-org.quartz.impl.StdSchedulerFactory:1374 >> Quartz scheduler 'quartzScheduler' initialized from an externally provided properties instance.
+2021-08-23-22:24:20.463INFO [main]-org.quartz.impl.StdSchedulerFactory:1378 >> Quartz scheduler version: 2.3.2
+2021-08-23-22:24:20.463INFO [main]-org.quartz.core.QuartzScheduler:2293 >> JobFactory set to: org.springframework.scheduling.quartz.SpringBeanJobFactory@779b4f9c
+2021-08-23-22:24:20.468INFO [main]-org.springframework.scheduling.concurrent.ExecutorConfigurationSupport:181 >> Initializing ExecutorService 'taskScheduler'
+2021-08-23-22:24:20.509INFO [main]-org.apache.juli.logging.DirectJDKLog:173 >> Starting ProtocolHandler ["http-nio-8080"]
+2021-08-23-22:24:20.527INFO [main]-org.springframework.boot.web.embedded.tomcat.TomcatWebServer:220 >> Tomcat started on port(s): 8080 (http) with context path ''
+2021-08-23-22:24:20.528INFO [main]-springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper:160 >> Context refreshed
+2021-08-23-22:24:20.542INFO [main]-springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper:163 >> Found 1 custom documentation plugin(s)
+2021-08-23-22:24:20.568INFO [main]-springfox.documentation.spring.web.scanners.ApiListingReferenceScanner:41 >> Scanning for api listing references
+2021-08-23-22:24:20.712INFO [main]-springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator:40 >> Generating unique operation named: listUsingGET_1
+2021-08-23-22:24:20.717INFO [main]-springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator:40 >> Generating unique operation named: getProductCommentsCountUsingGET_1
+2021-08-23-22:24:20.732INFO [main]-org.springframework.scheduling.quartz.SchedulerFactoryBean:727 >> Starting Quartz Scheduler now
+2021-08-23-22:24:20.732INFO [main]-org.quartz.core.QuartzScheduler:547 >> Scheduler quartzScheduler_$_NON_CLUSTERED started.
+2021-08-23-22:24:20.742INFO [main]-org.springframework.boot.StartupInfoLogger:61 >> Started ApiApplication in 3.378 seconds (JVM running for 3.995)
+2021-08-23-22:29:22.042INFO [http-nio-8080-exec-1]-org.apache.juli.logging.DirectJDKLog:173 >> Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-08-23-22:29:22.042INFO [http-nio-8080-exec-1]-org.springframework.web.servlet.FrameworkServlet:525 >> Initializing Servlet 'dispatcherServlet'
+2021-08-23-22:29:22.043INFO [http-nio-8080-exec-1]-org.springframework.web.servlet.FrameworkServlet:547 >> Completed initialization in 1 ms
+2021-08-23-22:29:22.376INFO [http-nio-8080-exec-2]-com.xhh.onlineMall.service.impl.IndexImgServiceImpl:25 >> 加载首页开始+++++++
+2021-08-23-22:29:22.390INFO [http-nio-8080-exec-2]-com.xhh.onlineMall.service.impl.IndexImgServiceImpl:30 >> 加载首页成功-------
+2021-08-23-22:29:23.997INFO [http-nio-8080-exec-4]-com.xhh.onlineMall.service.impl.IndexImgServiceImpl:25 >> 加载首页开始+++++++
+2021-08-23-22:29:24.000INFO [http-nio-8080-exec-4]-com.xhh.onlineMall.service.impl.IndexImgServiceImpl:30 >> 加载首页成功-------
+2021-08-23-22:29:32.529ERROR [http-nio-8080-exec-6]-org.apache.juli.logging.DirectJDKLog:175 >> Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is java.lang.ClassCastException: com.xhh.onlineMall.entity.Product cannot be cast to java.lang.String] with root cause
+java.lang.ClassCastException: com.xhh.onlineMall.entity.Product cannot be cast to java.lang.String
+	at org.springframework.data.redis.serializer.StringRedisSerializer.serialize(StringRedisSerializer.java:36)
+	at org.springframework.data.redis.core.AbstractOperations.rawHashKey(AbstractOperations.java:166)
+	at org.springframework.data.redis.core.DefaultHashOperations.put(DefaultHashOperations.java:188)
+	at org.springframework.data.redis.core.DefaultBoundHashOperations.put(DefaultBoundHashOperations.java:156)
+	at com.xhh.onlineMall.service.impl.ProductServiceImpl.getProductBasicInfo(ProductServiceImpl.java:106)
+	at com.xhh.onlineMall.service.impl.ProductServiceImpl$$FastClassBySpringCGLIB$$8bd3add7.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:779)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:750)
+	at org.springframework.transaction.interceptor.TransactionInterceptor$1.proceedWithInvocation(TransactionInterceptor.java:123)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:388)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:119)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:750)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:692)
+	at com.xhh.onlineMall.service.impl.ProductServiceImpl$$EnhancerBySpringCGLIB$$e5eb1739.getProductBasicInfo(<generated>)
+	at com.xhh.onlineMall.controller.ProductController.getProductBasicInfo(ProductController.java:25)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:197)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:141)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:106)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:894)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1060)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:962)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:626)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:733)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:143)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:374)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:888)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1597)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+2021-08-23-22:30:08.556ERROR [http-nio-8080-exec-10]-org.apache.juli.logging.DirectJDKLog:175 >> Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is java.lang.ClassCastException: com.xhh.onlineMall.entity.Product cannot be cast to java.lang.String] with root cause
+java.lang.ClassCastException: com.xhh.onlineMall.entity.Product cannot be cast to java.lang.String
+	at org.springframework.data.redis.serializer.StringRedisSerializer.serialize(StringRedisSerializer.java:36)
+	at org.springframework.data.redis.core.AbstractOperations.rawHashKey(AbstractOperations.java:166)
+	at org.springframework.data.redis.core.DefaultHashOperations.put(DefaultHashOperations.java:188)
+	at org.springframework.data.redis.core.DefaultBoundHashOperations.put(DefaultBoundHashOperations.java:156)
+	at com.xhh.onlineMall.service.impl.ProductServiceImpl.getProductBasicInfo(ProductServiceImpl.java:106)
+	at com.xhh.onlineMall.service.impl.ProductServiceImpl$$FastClassBySpringCGLIB$$8bd3add7.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:779)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:750)
+	at org.springframework.transaction.interceptor.TransactionInterceptor$1.proceedWithInvocation(TransactionInterceptor.java:123)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:388)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:119)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:750)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:692)
+	at com.xhh.onlineMall.service.impl.ProductServiceImpl$$EnhancerBySpringCGLIB$$e5eb1739.getProductBasicInfo(<generated>)
+	at com.xhh.onlineMall.controller.ProductController.getProductBasicInfo(ProductController.java:25)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:197)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:141)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:106)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:894)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1060)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:962)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:626)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:733)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:143)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:374)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:888)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1597)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+2021-08-23-22:30:43.927ERROR [http-nio-8080-exec-5]-org.apache.juli.logging.DirectJDKLog:175 >> Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is java.lang.IllegalArgumentException: argument "content" is null] with root cause
+java.lang.IllegalArgumentException: argument "content" is null
+	at com.fasterxml.jackson.databind.ObjectMapper._assertNotNull(ObjectMapper.java:4737)
+	at com.fasterxml.jackson.databind.ObjectMapper.readValue(ObjectMapper.java:3466)
+	at com.xhh.onlineMall.service.impl.ProductServiceImpl.getProductBasicInfo(ProductServiceImpl.java:69)
+	at com.xhh.onlineMall.service.impl.ProductServiceImpl$$FastClassBySpringCGLIB$$8bd3add7.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:779)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:750)
+	at org.springframework.transaction.interceptor.TransactionInterceptor$1.proceedWithInvocation(TransactionInterceptor.java:123)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:388)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:119)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:750)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:692)
+	at com.xhh.onlineMall.service.impl.ProductServiceImpl$$EnhancerBySpringCGLIB$$e5eb1739.getProductBasicInfo(<generated>)
+	at com.xhh.onlineMall.controller.ProductController.getProductBasicInfo(ProductController.java:25)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:197)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:141)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:106)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:894)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1060)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:962)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:626)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:733)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:143)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:374)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:888)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1597)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+2021-08-23-22:32:16.917ERROR [http-nio-8080-exec-1]-org.apache.juli.logging.DirectJDKLog:175 >> Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is java.lang.IllegalArgumentException: argument "content" is null] with root cause
+java.lang.IllegalArgumentException: argument "content" is null
+	at com.fasterxml.jackson.databind.ObjectMapper._assertNotNull(ObjectMapper.java:4737)
+	at com.fasterxml.jackson.databind.ObjectMapper.readValue(ObjectMapper.java:3466)
+	at com.xhh.onlineMall.service.impl.ProductServiceImpl.getProductBasicInfo(ProductServiceImpl.java:69)
+	at com.xhh.onlineMall.service.impl.ProductServiceImpl$$FastClassBySpringCGLIB$$8bd3add7.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:779)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:750)
+	at org.springframework.transaction.interceptor.TransactionInterceptor$1.proceedWithInvocation(TransactionInterceptor.java:123)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:388)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:119)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:750)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:692)
+	at com.xhh.onlineMall.service.impl.ProductServiceImpl$$EnhancerBySpringCGLIB$$e5eb1739.getProductBasicInfo(<generated>)
+	at com.xhh.onlineMall.controller.ProductController.getProductBasicInfo(ProductController.java:25)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:197)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:141)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:106)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:894)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1060)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:962)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:626)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:733)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:143)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:374)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:888)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1597)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+2021-08-23-22:34:01.933ERROR [http-nio-8080-exec-8]-org.apache.juli.logging.DirectJDKLog:175 >> Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is java.lang.IllegalArgumentException: argument "content" is null] with root cause
+java.lang.IllegalArgumentException: argument "content" is null
+	at com.fasterxml.jackson.databind.ObjectMapper._assertNotNull(ObjectMapper.java:4737)
+	at com.fasterxml.jackson.databind.ObjectMapper.readValue(ObjectMapper.java:3466)
+	at com.xhh.onlineMall.service.impl.ProductServiceImpl.getProductBasicInfo(ProductServiceImpl.java:69)
+	at com.xhh.onlineMall.service.impl.ProductServiceImpl$$FastClassBySpringCGLIB$$8bd3add7.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:779)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:750)
+	at org.springframework.transaction.interceptor.TransactionInterceptor$1.proceedWithInvocation(TransactionInterceptor.java:123)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:388)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:119)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:750)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:692)
+	at com.xhh.onlineMall.service.impl.ProductServiceImpl$$EnhancerBySpringCGLIB$$e5eb1739.getProductBasicInfo(<generated>)
+	at com.xhh.onlineMall.controller.ProductController.getProductBasicInfo(ProductController.java:25)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:197)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:141)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:106)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:894)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1060)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:962)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:626)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:733)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:143)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:374)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:888)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1597)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+2021-08-23-22:35:48.966ERROR [http-nio-8080-exec-7]-org.apache.juli.logging.DirectJDKLog:175 >> Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is java.lang.ClassCastException: com.xhh.onlineMall.entity.Product cannot be cast to java.lang.String] with root cause
+java.lang.ClassCastException: com.xhh.onlineMall.entity.Product cannot be cast to java.lang.String
+	at org.springframework.data.redis.serializer.StringRedisSerializer.serialize(StringRedisSerializer.java:36)
+	at org.springframework.data.redis.core.AbstractOperations.rawHashKey(AbstractOperations.java:166)
+	at org.springframework.data.redis.core.DefaultHashOperations.put(DefaultHashOperations.java:188)
+	at org.springframework.data.redis.core.DefaultBoundHashOperations.put(DefaultBoundHashOperations.java:156)
+	at com.xhh.onlineMall.service.impl.ProductServiceImpl.getProductBasicInfo(ProductServiceImpl.java:106)
+	at com.xhh.onlineMall.service.impl.ProductServiceImpl$$FastClassBySpringCGLIB$$8bd3add7.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:779)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:750)
+	at org.springframework.transaction.interceptor.TransactionInterceptor$1.proceedWithInvocation(TransactionInterceptor.java:123)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:388)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:119)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:750)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:692)
+	at com.xhh.onlineMall.service.impl.ProductServiceImpl$$EnhancerBySpringCGLIB$$e5eb1739.getProductBasicInfo(<generated>)
+	at com.xhh.onlineMall.controller.ProductController.getProductBasicInfo(ProductController.java:25)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:197)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:141)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:106)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:894)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1060)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:962)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:626)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:733)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:143)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:374)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:888)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1597)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+2021-08-23-22:36:13.580INFO [SpringContextShutdownHook]-org.quartz.core.QuartzScheduler:585 >> Scheduler quartzScheduler_$_NON_CLUSTERED paused.
+2021-08-23-22:36:13.676INFO [SpringContextShutdownHook]-org.springframework.scheduling.concurrent.ExecutorConfigurationSupport:218 >> Shutting down ExecutorService 'taskScheduler'
+2021-08-23-22:36:13.676INFO [SpringContextShutdownHook]-org.springframework.scheduling.quartz.SchedulerFactoryBean:845 >> Shutting down Quartz Scheduler
+2021-08-23-22:36:13.676INFO [SpringContextShutdownHook]-org.quartz.core.QuartzScheduler:666 >> Scheduler quartzScheduler_$_NON_CLUSTERED shutting down.
+2021-08-23-22:36:13.676INFO [SpringContextShutdownHook]-org.quartz.core.QuartzScheduler:585 >> Scheduler quartzScheduler_$_NON_CLUSTERED paused.
+2021-08-23-22:36:13.677INFO [SpringContextShutdownHook]-org.quartz.core.QuartzScheduler:740 >> Scheduler quartzScheduler_$_NON_CLUSTERED shutdown complete.
+2021-08-23-22:36:13.677INFO [SpringContextShutdownHook]-org.springframework.scheduling.concurrent.ExecutorConfigurationSupport:218 >> Shutting down ExecutorService 'applicationTaskExecutor'
+2021-08-23-22:36:13.893INFO [SpringContextShutdownHook]-com.alibaba.druid.pool.DruidDataSource:2029 >> {dataSource-1} closing ...
+2021-08-23-22:36:13.898INFO [SpringContextShutdownHook]-com.alibaba.druid.pool.DruidDataSource:2101 >> {dataSource-1} closed
+2021-08-23-22:36:17.719INFO [main]-org.springframework.boot.StartupInfoLogger:55 >> Starting ApiApplication using Java 1.8.0_131 on DESKTOP-OEKQMMV with PID 14608 (D:\DevelopmentTool\ide\ideaWorkSpace2\onlineMallX\api\target\classes started by user in D:\DevelopmentTool\ide\ideaWorkSpace2\onlineMallX)
+2021-08-23-22:36:17.721INFO [main]-org.springframework.boot.SpringApplication:660 >> No active profile set, falling back to default profiles: default
+2021-08-23-22:36:18.367INFO [main]-org.springframework.data.repository.config.RepositoryConfigurationDelegate:250 >> Multiple Spring Data modules found, entering strict repository configuration mode!
+2021-08-23-22:36:18.369INFO [main]-org.springframework.data.repository.config.RepositoryConfigurationDelegate:128 >> Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2021-08-23-22:36:18.401INFO [main]-org.springframework.data.repository.config.RepositoryConfigurationDelegate:188 >> Finished Spring Data repository scanning in 21 ms. Found 0 Redis repository interfaces.
+2021-08-23-22:36:18.490WARN [main]-org.mybatis.logging.Logger:44 >> No MyBatis mapper was found in '[com.xhh]' package. Please check your configuration.
+2021-08-23-22:36:18.644ERROR [main]-org.apache.juli.logging.DirectJDKLog:173 >> An incompatible version [1.1.24] of the Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2021-08-23-22:36:18.778INFO [main]-org.springframework.boot.web.embedded.tomcat.TomcatWebServer:108 >> Tomcat initialized with port(s): 8080 (http)
+2021-08-23-22:36:18.785INFO [main]-org.apache.juli.logging.DirectJDKLog:173 >> Initializing ProtocolHandler ["http-nio-8080"]
+2021-08-23-22:36:18.785INFO [main]-org.apache.juli.logging.DirectJDKLog:173 >> Starting service [Tomcat]
+2021-08-23-22:36:18.785INFO [main]-org.apache.juli.logging.DirectJDKLog:173 >> Starting Servlet engine: [Apache Tomcat/9.0.41]
+2021-08-23-22:36:18.842INFO [main]-org.apache.juli.logging.DirectJDKLog:173 >> Initializing Spring embedded WebApplicationContext
+2021-08-23-22:36:18.842INFO [main]-org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext:289 >> Root WebApplicationContext: initialization completed in 1087 ms
+2021-08-23-22:36:18.900INFO [main]-com.alibaba.druid.spring.boot.autoconfigure.DruidDataSourceAutoConfigure:56 >> Init DruidDataSource
+2021-08-23-22:36:18.978INFO [main]-com.alibaba.druid.pool.DruidDataSource:994 >> {dataSource-1} inited
+2021-08-23-22:36:19.995INFO [main]-springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping:69 >> Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2021-08-23-22:36:20.064INFO [main]-org.springframework.scheduling.concurrent.ExecutorConfigurationSupport:181 >> Initializing ExecutorService 'applicationTaskExecutor'
+2021-08-23-22:36:20.147INFO [main]-tk.mybatis.mapper.autoconfigure.MapperCacheDisabler:60 >> Clear tk.mybatis.mapper.util.MsUtil CLASS_CACHE cache.
+2021-08-23-22:36:20.148INFO [main]-tk.mybatis.mapper.autoconfigure.MapperCacheDisabler:60 >> Clear tk.mybatis.mapper.genid.GenIdUtil CACHE cache.
+2021-08-23-22:36:20.148INFO [main]-tk.mybatis.mapper.autoconfigure.MapperCacheDisabler:60 >> Clear tk.mybatis.mapper.version.VersionUtil CACHE cache.
+2021-08-23-22:36:20.148INFO [main]-tk.mybatis.mapper.autoconfigure.MapperCacheDisabler:83 >> Clear EntityHelper entityTableMap cache.
+2021-08-23-22:36:20.244INFO [main]-org.quartz.impl.StdSchedulerFactory:1220 >> Using default implementation for ThreadExecutor
+2021-08-23-22:36:20.252INFO [main]-org.quartz.core.SchedulerSignalerImpl:61 >> Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2021-08-23-22:36:20.252INFO [main]-org.quartz.core.QuartzScheduler:229 >> Quartz Scheduler v.2.3.2 created.
+2021-08-23-22:36:20.253INFO [main]-org.quartz.simpl.RAMJobStore:155 >> RAMJobStore initialized.
+2021-08-23-22:36:20.253INFO [main]-org.quartz.core.QuartzScheduler:294 >> Scheduler meta-data: Quartz Scheduler (v2.3.2) 'quartzScheduler' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+2021-08-23-22:36:20.254INFO [main]-org.quartz.impl.StdSchedulerFactory:1374 >> Quartz scheduler 'quartzScheduler' initialized from an externally provided properties instance.
+2021-08-23-22:36:20.254INFO [main]-org.quartz.impl.StdSchedulerFactory:1378 >> Quartz scheduler version: 2.3.2
+2021-08-23-22:36:20.254INFO [main]-org.quartz.core.QuartzScheduler:2293 >> JobFactory set to: org.springframework.scheduling.quartz.SpringBeanJobFactory@77d959f1
+2021-08-23-22:36:20.257INFO [main]-org.springframework.scheduling.concurrent.ExecutorConfigurationSupport:181 >> Initializing ExecutorService 'taskScheduler'
+2021-08-23-22:36:20.294INFO [main]-org.apache.juli.logging.DirectJDKLog:173 >> Starting ProtocolHandler ["http-nio-8080"]
+2021-08-23-22:36:20.309INFO [main]-org.springframework.boot.web.embedded.tomcat.TomcatWebServer:220 >> Tomcat started on port(s): 8080 (http) with context path ''
+2021-08-23-22:36:20.310INFO [main]-springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper:160 >> Context refreshed
+2021-08-23-22:36:20.323INFO [main]-springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper:163 >> Found 1 custom documentation plugin(s)
+2021-08-23-22:36:20.347INFO [main]-springfox.documentation.spring.web.scanners.ApiListingReferenceScanner:41 >> Scanning for api listing references
+2021-08-23-22:36:20.457INFO [main]-springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator:40 >> Generating unique operation named: listUsingGET_1
+2021-08-23-22:36:20.460INFO [main]-springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator:40 >> Generating unique operation named: getProductCommentsCountUsingGET_1
+2021-08-23-22:36:20.473INFO [main]-org.springframework.scheduling.quartz.SchedulerFactoryBean:727 >> Starting Quartz Scheduler now
+2021-08-23-22:36:20.473INFO [main]-org.quartz.core.QuartzScheduler:547 >> Scheduler quartzScheduler_$_NON_CLUSTERED started.
+2021-08-23-22:36:20.483INFO [main]-org.springframework.boot.StartupInfoLogger:61 >> Started ApiApplication in 3.147 seconds (JVM running for 3.706)
+2021-08-23-22:36:31.892INFO [http-nio-8080-exec-4]-org.apache.juli.logging.DirectJDKLog:173 >> Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-08-23-22:36:31.893INFO [http-nio-8080-exec-4]-org.springframework.web.servlet.FrameworkServlet:525 >> Initializing Servlet 'dispatcherServlet'
+2021-08-23-22:36:31.893INFO [http-nio-8080-exec-4]-org.springframework.web.servlet.FrameworkServlet:547 >> Completed initialization in 0 ms
+2021-08-23-22:37:01.329INFO [http-nio-8080-exec-5]-com.xhh.onlineMall.service.impl.IndexImgServiceImpl:25 >> 加载首页开始+++++++
+2021-08-23-22:37:01.338INFO [http-nio-8080-exec-5]-com.xhh.onlineMall.service.impl.IndexImgServiceImpl:30 >> 加载首页成功-------
+2021-08-23-22:37:23.893INFO [http-nio-8080-exec-9]-com.xhh.onlineMall.service.impl.IndexImgServiceImpl:25 >> 加载首页开始+++++++
+2021-08-23-22:37:23.895INFO [http-nio-8080-exec-9]-com.xhh.onlineMall.service.impl.IndexImgServiceImpl:30 >> 加载首页成功-------
+2021-08-23-23:18:56.912INFO [SpringContextShutdownHook]-org.quartz.core.QuartzScheduler:585 >> Scheduler quartzScheduler_$_NON_CLUSTERED paused.
+2021-08-23-23:18:57.043INFO [SpringContextShutdownHook]-org.springframework.scheduling.concurrent.ExecutorConfigurationSupport:218 >> Shutting down ExecutorService 'taskScheduler'
+2021-08-23-23:18:57.044INFO [SpringContextShutdownHook]-org.springframework.scheduling.quartz.SchedulerFactoryBean:845 >> Shutting down Quartz Scheduler
+2021-08-23-23:18:57.045INFO [SpringContextShutdownHook]-org.quartz.core.QuartzScheduler:666 >> Scheduler quartzScheduler_$_NON_CLUSTERED shutting down.
+2021-08-23-23:18:57.045INFO [SpringContextShutdownHook]-org.quartz.core.QuartzScheduler:585 >> Scheduler quartzScheduler_$_NON_CLUSTERED paused.
+2021-08-23-23:18:57.045INFO [SpringContextShutdownHook]-org.quartz.core.QuartzScheduler:740 >> Scheduler quartzScheduler_$_NON_CLUSTERED shutdown complete.
+2021-08-23-23:18:57.046INFO [SpringContextShutdownHook]-org.springframework.scheduling.concurrent.ExecutorConfigurationSupport:218 >> Shutting down ExecutorService 'applicationTaskExecutor'
+2021-08-23-23:18:57.267INFO [SpringContextShutdownHook]-com.alibaba.druid.pool.DruidDataSource:2029 >> {dataSource-1} closing ...
+2021-08-23-23:18:57.273INFO [SpringContextShutdownHook]-com.alibaba.druid.pool.DruidDataSource:2101 >> {dataSource-1} closed
+2021-08-23-23:19:01.103INFO [main]-org.springframework.boot.StartupInfoLogger:55 >> Starting ApiApplication using Java 1.8.0_131 on DESKTOP-OEKQMMV with PID 1732 (D:\DevelopmentTool\ide\ideaWorkSpace2\onlineMallX\api\target\classes started by user in D:\DevelopmentTool\ide\ideaWorkSpace2\onlineMallX)
+2021-08-23-23:19:01.105INFO [main]-org.springframework.boot.SpringApplication:660 >> No active profile set, falling back to default profiles: default
+2021-08-23-23:19:01.773INFO [main]-org.springframework.data.repository.config.RepositoryConfigurationDelegate:250 >> Multiple Spring Data modules found, entering strict repository configuration mode!
+2021-08-23-23:19:01.775INFO [main]-org.springframework.data.repository.config.RepositoryConfigurationDelegate:128 >> Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2021-08-23-23:19:01.808INFO [main]-org.springframework.data.repository.config.RepositoryConfigurationDelegate:188 >> Finished Spring Data repository scanning in 22 ms. Found 0 Redis repository interfaces.
+2021-08-23-23:19:01.903WARN [main]-org.mybatis.logging.Logger:44 >> No MyBatis mapper was found in '[com.xhh]' package. Please check your configuration.
+2021-08-23-23:19:02.090ERROR [main]-org.apache.juli.logging.DirectJDKLog:173 >> An incompatible version [1.1.24] of the Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2021-08-23-23:19:02.231INFO [main]-org.springframework.boot.web.embedded.tomcat.TomcatWebServer:108 >> Tomcat initialized with port(s): 8080 (http)
+2021-08-23-23:19:02.238INFO [main]-org.apache.juli.logging.DirectJDKLog:173 >> Initializing ProtocolHandler ["http-nio-8080"]
+2021-08-23-23:19:02.238INFO [main]-org.apache.juli.logging.DirectJDKLog:173 >> Starting service [Tomcat]
+2021-08-23-23:19:02.238INFO [main]-org.apache.juli.logging.DirectJDKLog:173 >> Starting Servlet engine: [Apache Tomcat/9.0.41]
+2021-08-23-23:19:02.302INFO [main]-org.apache.juli.logging.DirectJDKLog:173 >> Initializing Spring embedded WebApplicationContext
+2021-08-23-23:19:02.302INFO [main]-org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext:289 >> Root WebApplicationContext: initialization completed in 1162 ms
+2021-08-23-23:19:02.371INFO [main]-com.alibaba.druid.spring.boot.autoconfigure.DruidDataSourceAutoConfigure:56 >> Init DruidDataSource
+2021-08-23-23:19:02.454INFO [main]-com.alibaba.druid.pool.DruidDataSource:994 >> {dataSource-1} inited
+2021-08-23-23:19:03.522INFO [main]-springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping:69 >> Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2021-08-23-23:19:03.595INFO [main]-org.springframework.scheduling.concurrent.ExecutorConfigurationSupport:181 >> Initializing ExecutorService 'applicationTaskExecutor'
+2021-08-23-23:19:03.682INFO [main]-tk.mybatis.mapper.autoconfigure.MapperCacheDisabler:60 >> Clear tk.mybatis.mapper.util.MsUtil CLASS_CACHE cache.
+2021-08-23-23:19:03.682INFO [main]-tk.mybatis.mapper.autoconfigure.MapperCacheDisabler:60 >> Clear tk.mybatis.mapper.genid.GenIdUtil CACHE cache.
+2021-08-23-23:19:03.683INFO [main]-tk.mybatis.mapper.autoconfigure.MapperCacheDisabler:60 >> Clear tk.mybatis.mapper.version.VersionUtil CACHE cache.
+2021-08-23-23:19:03.683INFO [main]-tk.mybatis.mapper.autoconfigure.MapperCacheDisabler:83 >> Clear EntityHelper entityTableMap cache.
+2021-08-23-23:19:03.795INFO [main]-org.quartz.impl.StdSchedulerFactory:1220 >> Using default implementation for ThreadExecutor
+2021-08-23-23:19:03.803INFO [main]-org.quartz.core.SchedulerSignalerImpl:61 >> Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2021-08-23-23:19:03.803INFO [main]-org.quartz.core.QuartzScheduler:229 >> Quartz Scheduler v.2.3.2 created.
+2021-08-23-23:19:03.804INFO [main]-org.quartz.simpl.RAMJobStore:155 >> RAMJobStore initialized.
+2021-08-23-23:19:03.804INFO [main]-org.quartz.core.QuartzScheduler:294 >> Scheduler meta-data: Quartz Scheduler (v2.3.2) 'quartzScheduler' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+2021-08-23-23:19:03.804INFO [main]-org.quartz.impl.StdSchedulerFactory:1374 >> Quartz scheduler 'quartzScheduler' initialized from an externally provided properties instance.
+2021-08-23-23:19:03.805INFO [main]-org.quartz.impl.StdSchedulerFactory:1378 >> Quartz scheduler version: 2.3.2
+2021-08-23-23:19:03.805INFO [main]-org.quartz.core.QuartzScheduler:2293 >> JobFactory set to: org.springframework.scheduling.quartz.SpringBeanJobFactory@e1a150c
+2021-08-23-23:19:03.810INFO [main]-org.springframework.scheduling.concurrent.ExecutorConfigurationSupport:181 >> Initializing ExecutorService 'taskScheduler'
+2021-08-23-23:19:03.857INFO [main]-org.apache.juli.logging.DirectJDKLog:173 >> Starting ProtocolHandler ["http-nio-8080"]
+2021-08-23-23:19:03.872INFO [main]-org.springframework.boot.web.embedded.tomcat.TomcatWebServer:220 >> Tomcat started on port(s): 8080 (http) with context path ''
+2021-08-23-23:19:03.873INFO [main]-springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper:160 >> Context refreshed
+2021-08-23-23:19:03.886INFO [main]-springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper:163 >> Found 1 custom documentation plugin(s)
+2021-08-23-23:19:03.909INFO [main]-springfox.documentation.spring.web.scanners.ApiListingReferenceScanner:41 >> Scanning for api listing references
+2021-08-23-23:19:04.019INFO [main]-springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator:40 >> Generating unique operation named: listUsingGET_1
+2021-08-23-23:19:04.023INFO [main]-springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator:40 >> Generating unique operation named: getProductCommentsCountUsingGET_1
+2021-08-23-23:19:04.035INFO [main]-org.springframework.scheduling.quartz.SchedulerFactoryBean:727 >> Starting Quartz Scheduler now
+2021-08-23-23:19:04.035INFO [main]-org.quartz.core.QuartzScheduler:547 >> Scheduler quartzScheduler_$_NON_CLUSTERED started.
+2021-08-23-23:19:04.044INFO [main]-org.springframework.boot.StartupInfoLogger:61 >> Started ApiApplication in 3.337 seconds (JVM running for 3.931)
+2021-08-23-23:19:15.626INFO [http-nio-8080-exec-1]-org.apache.juli.logging.DirectJDKLog:173 >> Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-08-23-23:19:15.627INFO [http-nio-8080-exec-1]-org.springframework.web.servlet.FrameworkServlet:525 >> Initializing Servlet 'dispatcherServlet'
+2021-08-23-23:19:15.628INFO [http-nio-8080-exec-1]-org.springframework.web.servlet.FrameworkServlet:547 >> Completed initialization in 1 ms
+2021-08-23-23:19:15.656INFO [http-nio-8080-exec-3]-com.xhh.onlineMall.service.impl.IndexImgServiceImpl:35 >> 加载首页轮播图开始+++++++
+2021-08-23-23:19:27.846INFO [http-nio-8080-exec-3]-com.xhh.onlineMall.service.impl.IndexImgServiceImpl:53 >> 加载首页轮播图成功+++++++DB
+2021-08-23-23:19:36.777INFO [http-nio-8080-exec-5]-com.xhh.onlineMall.service.impl.IndexImgServiceImpl:35 >> 加载首页轮播图开始+++++++
+2021-08-23-23:19:43.305INFO [http-nio-8080-exec-5]-com.xhh.onlineMall.service.impl.IndexImgServiceImpl:39 >> 加载首页轮播图成功+++++++redis
+2021-08-23-23:19:56.917INFO [http-nio-8080-exec-9]-com.xhh.onlineMall.service.impl.IndexImgServiceImpl:35 >> 加载首页轮播图开始+++++++
+2021-08-23-23:19:56.929INFO [http-nio-8080-exec-9]-com.xhh.onlineMall.service.impl.IndexImgServiceImpl:39 >> 加载首页轮播图成功+++++++redis
+2021-08-23-23:19:57.788INFO [http-nio-8080-exec-1]-com.xhh.onlineMall.service.impl.IndexImgServiceImpl:35 >> 加载首页轮播图开始+++++++
+2021-08-23-23:19:57.799INFO [http-nio-8080-exec-1]-com.xhh.onlineMall.service.impl.IndexImgServiceImpl:39 >> 加载首页轮播图成功+++++++redis
+2021-08-23-23:20:03.573INFO [SpringContextShutdownHook]-org.quartz.core.QuartzScheduler:585 >> Scheduler quartzScheduler_$_NON_CLUSTERED paused.
+2021-08-23-23:20:03.666INFO [SpringContextShutdownHook]-org.springframework.scheduling.concurrent.ExecutorConfigurationSupport:218 >> Shutting down ExecutorService 'taskScheduler'
+2021-08-23-23:20:03.666INFO [SpringContextShutdownHook]-org.springframework.scheduling.quartz.SchedulerFactoryBean:845 >> Shutting down Quartz Scheduler
+2021-08-23-23:20:03.666INFO [SpringContextShutdownHook]-org.quartz.core.QuartzScheduler:666 >> Scheduler quartzScheduler_$_NON_CLUSTERED shutting down.
+2021-08-23-23:20:03.666INFO [SpringContextShutdownHook]-org.quartz.core.QuartzScheduler:585 >> Scheduler quartzScheduler_$_NON_CLUSTERED paused.
+2021-08-23-23:20:03.667INFO [SpringContextShutdownHook]-org.quartz.core.QuartzScheduler:740 >> Scheduler quartzScheduler_$_NON_CLUSTERED shutdown complete.
+2021-08-23-23:20:03.667INFO [SpringContextShutdownHook]-org.springframework.scheduling.concurrent.ExecutorConfigurationSupport:218 >> Shutting down ExecutorService 'applicationTaskExecutor'
+2021-08-23-23:20:03.884INFO [SpringContextShutdownHook]-com.alibaba.druid.pool.DruidDataSource:2029 >> {dataSource-1} closing ...
+2021-08-23-23:20:03.890INFO [SpringContextShutdownHook]-com.alibaba.druid.pool.DruidDataSource:2101 >> {dataSource-1} closed
+2021-08-23-23:22:54.273INFO [main]-org.springframework.boot.StartupInfoLogger:55 >> Starting ApiApplication using Java 1.8.0_131 on DESKTOP-OEKQMMV with PID 11532 (D:\DevelopmentTool\ide\ideaWorkSpace2\onlineMallX\api\target\classes started by user in D:\DevelopmentTool\ide\ideaWorkSpace2\onlineMallX)
+2021-08-23-23:22:54.275INFO [main]-org.springframework.boot.SpringApplication:660 >> No active profile set, falling back to default profiles: default
+2021-08-23-23:22:54.927INFO [main]-org.springframework.data.repository.config.RepositoryConfigurationDelegate:250 >> Multiple Spring Data modules found, entering strict repository configuration mode!
+2021-08-23-23:22:54.929INFO [main]-org.springframework.data.repository.config.RepositoryConfigurationDelegate:128 >> Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2021-08-23-23:22:54.961INFO [main]-org.springframework.data.repository.config.RepositoryConfigurationDelegate:188 >> Finished Spring Data repository scanning in 21 ms. Found 0 Redis repository interfaces.
+2021-08-23-23:22:55.053WARN [main]-org.mybatis.logging.Logger:44 >> No MyBatis mapper was found in '[com.xhh]' package. Please check your configuration.
+2021-08-23-23:22:55.213ERROR [main]-org.apache.juli.logging.DirectJDKLog:173 >> An incompatible version [1.1.24] of the Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2021-08-23-23:22:55.345INFO [main]-org.springframework.boot.web.embedded.tomcat.TomcatWebServer:108 >> Tomcat initialized with port(s): 8080 (http)
+2021-08-23-23:22:55.351INFO [main]-org.apache.juli.logging.DirectJDKLog:173 >> Initializing ProtocolHandler ["http-nio-8080"]
+2021-08-23-23:22:55.351INFO [main]-org.apache.juli.logging.DirectJDKLog:173 >> Starting service [Tomcat]
+2021-08-23-23:22:55.352INFO [main]-org.apache.juli.logging.DirectJDKLog:173 >> Starting Servlet engine: [Apache Tomcat/9.0.41]
+2021-08-23-23:22:55.409INFO [main]-org.apache.juli.logging.DirectJDKLog:173 >> Initializing Spring embedded WebApplicationContext
+2021-08-23-23:22:55.410INFO [main]-org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext:289 >> Root WebApplicationContext: initialization completed in 1100 ms
+2021-08-23-23:22:55.465INFO [main]-com.alibaba.druid.spring.boot.autoconfigure.DruidDataSourceAutoConfigure:56 >> Init DruidDataSource
+2021-08-23-23:22:55.542INFO [main]-com.alibaba.druid.pool.DruidDataSource:994 >> {dataSource-1} inited
+2021-08-23-23:22:56.652INFO [main]-springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping:69 >> Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2021-08-23-23:22:56.721INFO [main]-org.springframework.scheduling.concurrent.ExecutorConfigurationSupport:181 >> Initializing ExecutorService 'applicationTaskExecutor'
+2021-08-23-23:22:56.804INFO [main]-tk.mybatis.mapper.autoconfigure.MapperCacheDisabler:60 >> Clear tk.mybatis.mapper.util.MsUtil CLASS_CACHE cache.
+2021-08-23-23:22:56.805INFO [main]-tk.mybatis.mapper.autoconfigure.MapperCacheDisabler:60 >> Clear tk.mybatis.mapper.genid.GenIdUtil CACHE cache.
+2021-08-23-23:22:56.805INFO [main]-tk.mybatis.mapper.autoconfigure.MapperCacheDisabler:60 >> Clear tk.mybatis.mapper.version.VersionUtil CACHE cache.
+2021-08-23-23:22:56.806INFO [main]-tk.mybatis.mapper.autoconfigure.MapperCacheDisabler:83 >> Clear EntityHelper entityTableMap cache.
+2021-08-23-23:22:56.891INFO [main]-org.quartz.impl.StdSchedulerFactory:1220 >> Using default implementation for ThreadExecutor
+2021-08-23-23:22:56.898INFO [main]-org.quartz.core.SchedulerSignalerImpl:61 >> Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2021-08-23-23:22:56.898INFO [main]-org.quartz.core.QuartzScheduler:229 >> Quartz Scheduler v.2.3.2 created.
+2021-08-23-23:22:56.899INFO [main]-org.quartz.simpl.RAMJobStore:155 >> RAMJobStore initialized.
+2021-08-23-23:22:56.899INFO [main]-org.quartz.core.QuartzScheduler:294 >> Scheduler meta-data: Quartz Scheduler (v2.3.2) 'quartzScheduler' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+2021-08-23-23:22:56.899INFO [main]-org.quartz.impl.StdSchedulerFactory:1374 >> Quartz scheduler 'quartzScheduler' initialized from an externally provided properties instance.
+2021-08-23-23:22:56.899INFO [main]-org.quartz.impl.StdSchedulerFactory:1378 >> Quartz scheduler version: 2.3.2
+2021-08-23-23:22:56.900INFO [main]-org.quartz.core.QuartzScheduler:2293 >> JobFactory set to: org.springframework.scheduling.quartz.SpringBeanJobFactory@702cfbde
+2021-08-23-23:22:56.904INFO [main]-org.springframework.scheduling.concurrent.ExecutorConfigurationSupport:181 >> Initializing ExecutorService 'taskScheduler'
+2021-08-23-23:22:56.942INFO [main]-org.apache.juli.logging.DirectJDKLog:173 >> Starting ProtocolHandler ["http-nio-8080"]
+2021-08-23-23:22:56.960INFO [main]-org.springframework.boot.web.embedded.tomcat.TomcatWebServer:220 >> Tomcat started on port(s): 8080 (http) with context path ''
+2021-08-23-23:22:56.961INFO [main]-springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper:160 >> Context refreshed
+2021-08-23-23:22:56.975INFO [main]-springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper:163 >> Found 1 custom documentation plugin(s)
+2021-08-23-23:22:56.999INFO [main]-springfox.documentation.spring.web.scanners.ApiListingReferenceScanner:41 >> Scanning for api listing references
+2021-08-23-23:22:57.111INFO [main]-springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator:40 >> Generating unique operation named: listUsingGET_1
+2021-08-23-23:22:57.115INFO [main]-springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator:40 >> Generating unique operation named: getProductCommentsCountUsingGET_1
+2021-08-23-23:22:57.128INFO [main]-org.springframework.scheduling.quartz.SchedulerFactoryBean:727 >> Starting Quartz Scheduler now
+2021-08-23-23:22:57.129INFO [main]-org.quartz.core.QuartzScheduler:547 >> Scheduler quartzScheduler_$_NON_CLUSTERED started.
+2021-08-23-23:22:57.140INFO [main]-org.springframework.boot.StartupInfoLogger:61 >> Started ApiApplication in 3.282 seconds (JVM running for 3.881)
+2021-08-23-23:23:16.735INFO [http-nio-8080-exec-4]-org.apache.juli.logging.DirectJDKLog:173 >> Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-08-23-23:23:16.736INFO [http-nio-8080-exec-4]-org.springframework.web.servlet.FrameworkServlet:525 >> Initializing Servlet 'dispatcherServlet'
+2021-08-23-23:23:16.737INFO [http-nio-8080-exec-4]-org.springframework.web.servlet.FrameworkServlet:547 >> Completed initialization in 1 ms
+2021-08-23-23:23:16.763INFO [http-nio-8080-exec-3]-com.xhh.onlineMall.service.impl.IndexImgServiceImpl:36 >> 加载首页轮播图开始+++++++
+2021-08-23-23:23:17.339INFO [http-nio-8080-exec-3]-com.xhh.onlineMall.service.impl.IndexImgServiceImpl:56 >> redis写入轮播图缓存+++++++成功
+2021-08-23-23:23:17.339INFO [http-nio-8080-exec-3]-com.xhh.onlineMall.service.impl.IndexImgServiceImpl:57 >> 加载首页轮播图成功+++++++DB
+2021-08-23-23:23:18.815INFO [http-nio-8080-exec-5]-com.xhh.onlineMall.service.impl.IndexImgServiceImpl:36 >> 加载首页轮播图开始+++++++
+2021-08-23-23:23:18.830INFO [http-nio-8080-exec-5]-com.xhh.onlineMall.service.impl.IndexImgServiceImpl:40 >> 加载首页轮播图成功+++++++redis
+2021-08-23-23:23:32.672INFO [SpringContextShutdownHook]-org.quartz.core.QuartzScheduler:585 >> Scheduler quartzScheduler_$_NON_CLUSTERED paused.
+2021-08-23-23:23:32.768INFO [SpringContextShutdownHook]-org.springframework.scheduling.concurrent.ExecutorConfigurationSupport:218 >> Shutting down ExecutorService 'taskScheduler'
+2021-08-23-23:23:32.768INFO [SpringContextShutdownHook]-org.springframework.scheduling.quartz.SchedulerFactoryBean:845 >> Shutting down Quartz Scheduler
+2021-08-23-23:23:32.768INFO [SpringContextShutdownHook]-org.quartz.core.QuartzScheduler:666 >> Scheduler quartzScheduler_$_NON_CLUSTERED shutting down.
+2021-08-23-23:23:32.768INFO [SpringContextShutdownHook]-org.quartz.core.QuartzScheduler:585 >> Scheduler quartzScheduler_$_NON_CLUSTERED paused.
+2021-08-23-23:23:32.768INFO [SpringContextShutdownHook]-org.quartz.core.QuartzScheduler:740 >> Scheduler quartzScheduler_$_NON_CLUSTERED shutdown complete.
+2021-08-23-23:23:32.769INFO [SpringContextShutdownHook]-org.springframework.scheduling.concurrent.ExecutorConfigurationSupport:218 >> Shutting down ExecutorService 'applicationTaskExecutor'
+2021-08-23-23:23:32.886INFO [SpringContextShutdownHook]-com.alibaba.druid.pool.DruidDataSource:2029 >> {dataSource-1} closing ...
+2021-08-23-23:23:32.891INFO [SpringContextShutdownHook]-com.alibaba.druid.pool.DruidDataSource:2101 >> {dataSource-1} closed
