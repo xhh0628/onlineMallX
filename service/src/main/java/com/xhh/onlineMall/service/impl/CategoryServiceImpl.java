@@ -33,17 +33,30 @@ public class CategoryServiceImpl implements CategoryService {
         try {
             //商品列表redis化
             List<CategoryVO> categoryVOS=null;
-
             String categories = stringRedisTemplate.boundValueOps("categories").get();
             if (categories!=null){
                 JavaType javaType=objectMapper.getTypeFactory().constructParametricType(ArrayList.class, CategoryVO.class);
                 categoryVOS= objectMapper.readValue(categories, javaType);
-                return  new ResultVO(ResStatus.OK, "success", categoryVOS);
             }else{
-                categoryVOS = categoryMapper.selectAllCategories();
-                //数据库查询结果存入redis
-                stringRedisTemplate.boundValueOps("categories").set(objectMapper.writeValueAsString(categoryVOS),1, TimeUnit.DAYS);
+                //通过同步锁解决高并发请求redis击穿，（双重检测锁
+                synchronized (this){//同步锁service实例，串行并发请求
+                    //二次查询redis，判断是否访问数据库
+                    String categories2 = stringRedisTemplate.boundValueOps("categories").get();
+                    if (categories2==null){
+                        //高并发请求只有第一个会请求数据库
+                        categoryVOS = categoryMapper.selectAllCategories();
+                        //数据库查询结果存入redis
+                        stringRedisTemplate.boundValueOps("categories").set(objectMapper.writeValueAsString(categoryVOS),1, TimeUnit.DAYS);
+                    }else{
+                        JavaType javaType=objectMapper.getTypeFactory().constructParametricType(ArrayList.class, CategoryVO.class);
+                        categoryVOS= objectMapper.readValue(categories2, javaType);
+                    }
+                }
+            }
+            if(categoryVOS!=null){
                 return new ResultVO(ResStatus.OK, "success", categoryVOS);
+            }else{
+                return  new ResultVO(ResStatus.OK, "file", null);
             }
         } catch (JsonProcessingException e) {
             e.printStackTrace();
