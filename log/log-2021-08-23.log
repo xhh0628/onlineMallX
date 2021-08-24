@@ -725,3 +725,150 @@ java.lang.ClassCastException: com.xhh.onlineMall.entity.Product cannot be cast t
 2021-08-23-23:23:32.769INFO [SpringContextShutdownHook]-org.springframework.scheduling.concurrent.ExecutorConfigurationSupport:218 >> Shutting down ExecutorService 'applicationTaskExecutor'
 2021-08-23-23:23:32.886INFO [SpringContextShutdownHook]-com.alibaba.druid.pool.DruidDataSource:2029 >> {dataSource-1} closing ...
 2021-08-23-23:23:32.891INFO [SpringContextShutdownHook]-com.alibaba.druid.pool.DruidDataSource:2101 >> {dataSource-1} closed
+2021-08-23-23:27:34.648INFO [main]-org.springframework.boot.StartupInfoLogger:55 >> Starting ApiApplication using Java 1.8.0_131 on DESKTOP-OEKQMMV with PID 18612 (D:\DevelopmentTool\ide\ideaWorkSpace2\onlineMallX\api\target\classes started by user in D:\DevelopmentTool\ide\ideaWorkSpace2\onlineMallX)
+2021-08-23-23:27:34.650INFO [main]-org.springframework.boot.SpringApplication:660 >> No active profile set, falling back to default profiles: default
+2021-08-23-23:27:35.261INFO [main]-org.springframework.data.repository.config.RepositoryConfigurationDelegate:250 >> Multiple Spring Data modules found, entering strict repository configuration mode!
+2021-08-23-23:27:35.263INFO [main]-org.springframework.data.repository.config.RepositoryConfigurationDelegate:128 >> Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2021-08-23-23:27:35.294INFO [main]-org.springframework.data.repository.config.RepositoryConfigurationDelegate:188 >> Finished Spring Data repository scanning in 21 ms. Found 0 Redis repository interfaces.
+2021-08-23-23:27:35.381WARN [main]-org.mybatis.logging.Logger:44 >> No MyBatis mapper was found in '[com.xhh]' package. Please check your configuration.
+2021-08-23-23:27:35.533ERROR [main]-org.apache.juli.logging.DirectJDKLog:173 >> An incompatible version [1.1.24] of the Apache Tomcat Native library is installed, while Tomcat requires version [1.2.14]
+2021-08-23-23:27:35.663INFO [main]-org.springframework.boot.web.embedded.tomcat.TomcatWebServer:108 >> Tomcat initialized with port(s): 8080 (http)
+2021-08-23-23:27:35.669INFO [main]-org.apache.juli.logging.DirectJDKLog:173 >> Initializing ProtocolHandler ["http-nio-8080"]
+2021-08-23-23:27:35.670INFO [main]-org.apache.juli.logging.DirectJDKLog:173 >> Starting service [Tomcat]
+2021-08-23-23:27:35.670INFO [main]-org.apache.juli.logging.DirectJDKLog:173 >> Starting Servlet engine: [Apache Tomcat/9.0.41]
+2021-08-23-23:27:35.728INFO [main]-org.apache.juli.logging.DirectJDKLog:173 >> Initializing Spring embedded WebApplicationContext
+2021-08-23-23:27:35.728INFO [main]-org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext:289 >> Root WebApplicationContext: initialization completed in 1037 ms
+2021-08-23-23:27:35.785INFO [main]-com.alibaba.druid.spring.boot.autoconfigure.DruidDataSourceAutoConfigure:56 >> Init DruidDataSource
+2021-08-23-23:27:35.862INFO [main]-com.alibaba.druid.pool.DruidDataSource:994 >> {dataSource-1} inited
+2021-08-23-23:27:36.863INFO [main]-springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping:69 >> Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2021-08-23-23:27:36.926INFO [main]-org.springframework.scheduling.concurrent.ExecutorConfigurationSupport:181 >> Initializing ExecutorService 'applicationTaskExecutor'
+2021-08-23-23:27:37.008INFO [main]-tk.mybatis.mapper.autoconfigure.MapperCacheDisabler:60 >> Clear tk.mybatis.mapper.util.MsUtil CLASS_CACHE cache.
+2021-08-23-23:27:37.008INFO [main]-tk.mybatis.mapper.autoconfigure.MapperCacheDisabler:60 >> Clear tk.mybatis.mapper.genid.GenIdUtil CACHE cache.
+2021-08-23-23:27:37.008INFO [main]-tk.mybatis.mapper.autoconfigure.MapperCacheDisabler:60 >> Clear tk.mybatis.mapper.version.VersionUtil CACHE cache.
+2021-08-23-23:27:37.009INFO [main]-tk.mybatis.mapper.autoconfigure.MapperCacheDisabler:83 >> Clear EntityHelper entityTableMap cache.
+2021-08-23-23:27:37.099INFO [main]-org.quartz.impl.StdSchedulerFactory:1220 >> Using default implementation for ThreadExecutor
+2021-08-23-23:27:37.107INFO [main]-org.quartz.core.SchedulerSignalerImpl:61 >> Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2021-08-23-23:27:37.107INFO [main]-org.quartz.core.QuartzScheduler:229 >> Quartz Scheduler v.2.3.2 created.
+2021-08-23-23:27:37.108INFO [main]-org.quartz.simpl.RAMJobStore:155 >> RAMJobStore initialized.
+2021-08-23-23:27:37.108INFO [main]-org.quartz.core.QuartzScheduler:294 >> Scheduler meta-data: Quartz Scheduler (v2.3.2) 'quartzScheduler' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+2021-08-23-23:27:37.108INFO [main]-org.quartz.impl.StdSchedulerFactory:1374 >> Quartz scheduler 'quartzScheduler' initialized from an externally provided properties instance.
+2021-08-23-23:27:37.108INFO [main]-org.quartz.impl.StdSchedulerFactory:1378 >> Quartz scheduler version: 2.3.2
+2021-08-23-23:27:37.109INFO [main]-org.quartz.core.QuartzScheduler:2293 >> JobFactory set to: org.springframework.scheduling.quartz.SpringBeanJobFactory@41a8f0d8
+2021-08-23-23:27:37.113INFO [main]-org.springframework.scheduling.concurrent.ExecutorConfigurationSupport:181 >> Initializing ExecutorService 'taskScheduler'
+2021-08-23-23:27:37.151INFO [main]-org.apache.juli.logging.DirectJDKLog:173 >> Starting ProtocolHandler ["http-nio-8080"]
+2021-08-23-23:27:37.167INFO [main]-org.springframework.boot.web.embedded.tomcat.TomcatWebServer:220 >> Tomcat started on port(s): 8080 (http) with context path ''
+2021-08-23-23:27:37.167INFO [main]-springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper:160 >> Context refreshed
+2021-08-23-23:27:37.182INFO [main]-springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper:163 >> Found 1 custom documentation plugin(s)
+2021-08-23-23:27:37.207INFO [main]-springfox.documentation.spring.web.scanners.ApiListingReferenceScanner:41 >> Scanning for api listing references
+2021-08-23-23:27:37.312INFO [main]-springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator:40 >> Generating unique operation named: listUsingGET_1
+2021-08-23-23:27:37.316INFO [main]-springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator:40 >> Generating unique operation named: getProductCommentsCountUsingGET_1
+2021-08-23-23:27:37.329INFO [main]-org.springframework.scheduling.quartz.SchedulerFactoryBean:727 >> Starting Quartz Scheduler now
+2021-08-23-23:27:37.329INFO [main]-org.quartz.core.QuartzScheduler:547 >> Scheduler quartzScheduler_$_NON_CLUSTERED started.
+2021-08-23-23:27:37.339INFO [main]-org.springframework.boot.StartupInfoLogger:61 >> Started ApiApplication in 3.025 seconds (JVM running for 4.249)
+2021-08-23-23:27:44.530INFO [http-nio-8080-exec-2]-org.apache.juli.logging.DirectJDKLog:173 >> Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-08-23-23:27:44.531INFO [http-nio-8080-exec-2]-org.springframework.web.servlet.FrameworkServlet:525 >> Initializing Servlet 'dispatcherServlet'
+2021-08-23-23:27:44.532INFO [http-nio-8080-exec-2]-org.springframework.web.servlet.FrameworkServlet:547 >> Completed initialization in 1 ms
+2021-08-23-23:27:44.556INFO [http-nio-8080-exec-2]-com.xhh.onlineMall.service.impl.IndexImgServiceImpl:36 >> 加载首页轮播图开始+++++++
+2021-08-23-23:27:45.094INFO [http-nio-8080-exec-2]-com.xhh.onlineMall.service.impl.IndexImgServiceImpl:40 >> 加载首页轮播图成功+++++++redis
+2021-08-23-23:27:45.193INFO [http-nio-8080-exec-5]-com.xhh.onlineMall.service.impl.IndexImgServiceImpl:36 >> 加载首页轮播图开始+++++++
+2021-08-23-23:27:45.204INFO [http-nio-8080-exec-5]-com.xhh.onlineMall.service.impl.IndexImgServiceImpl:40 >> 加载首页轮播图成功+++++++redis
+2021-08-23-23:27:45.452INFO [http-nio-8080-exec-9]-com.xhh.onlineMall.service.impl.IndexImgServiceImpl:36 >> 加载首页轮播图开始+++++++
+2021-08-23-23:27:45.464INFO [http-nio-8080-exec-9]-com.xhh.onlineMall.service.impl.IndexImgServiceImpl:40 >> 加载首页轮播图成功+++++++redis
+2021-08-23-23:27:45.697INFO [http-nio-8080-exec-1]-com.xhh.onlineMall.service.impl.IndexImgServiceImpl:36 >> 加载首页轮播图开始+++++++
+2021-08-23-23:27:45.711INFO [http-nio-8080-exec-1]-com.xhh.onlineMall.service.impl.IndexImgServiceImpl:40 >> 加载首页轮播图成功+++++++redis
+2021-08-23-23:27:45.886INFO [http-nio-8080-exec-5]-com.xhh.onlineMall.service.impl.IndexImgServiceImpl:36 >> 加载首页轮播图开始+++++++
+2021-08-23-23:27:45.899INFO [http-nio-8080-exec-5]-com.xhh.onlineMall.service.impl.IndexImgServiceImpl:40 >> 加载首页轮播图成功+++++++redis
+2021-08-23-23:27:46.085INFO [http-nio-8080-exec-9]-com.xhh.onlineMall.service.impl.IndexImgServiceImpl:36 >> 加载首页轮播图开始+++++++
+2021-08-23-23:27:46.095INFO [http-nio-8080-exec-9]-com.xhh.onlineMall.service.impl.IndexImgServiceImpl:40 >> 加载首页轮播图成功+++++++redis
+2021-08-23-23:27:46.267INFO [http-nio-8080-exec-7]-com.xhh.onlineMall.service.impl.IndexImgServiceImpl:36 >> 加载首页轮播图开始+++++++
+2021-08-23-23:27:46.279INFO [http-nio-8080-exec-7]-com.xhh.onlineMall.service.impl.IndexImgServiceImpl:40 >> 加载首页轮播图成功+++++++redis
+2021-08-23-23:27:54.287INFO [http-nio-8080-exec-5]-com.xhh.onlineMall.service.impl.IndexImgServiceImpl:36 >> 加载首页轮播图开始+++++++
+2021-08-23-23:27:54.298INFO [http-nio-8080-exec-5]-com.xhh.onlineMall.service.impl.IndexImgServiceImpl:40 >> 加载首页轮播图成功+++++++redis
+2021-08-23-23:27:57.118INFO [http-nio-8080-exec-9]-com.xhh.onlineMall.service.impl.IndexImgServiceImpl:36 >> 加载首页轮播图开始+++++++
+2021-08-23-23:27:57.130INFO [http-nio-8080-exec-9]-com.xhh.onlineMall.service.impl.IndexImgServiceImpl:40 >> 加载首页轮播图成功+++++++redis
+2021-08-23-23:27:57.603INFO [http-nio-8080-exec-7]-com.xhh.onlineMall.service.impl.IndexImgServiceImpl:36 >> 加载首页轮播图开始+++++++
+2021-08-23-23:27:57.616INFO [http-nio-8080-exec-7]-com.xhh.onlineMall.service.impl.IndexImgServiceImpl:40 >> 加载首页轮播图成功+++++++redis
+2021-08-23-23:27:57.987INFO [http-nio-8080-exec-2]-com.xhh.onlineMall.service.impl.IndexImgServiceImpl:36 >> 加载首页轮播图开始+++++++
+2021-08-23-23:27:57.999INFO [http-nio-8080-exec-2]-com.xhh.onlineMall.service.impl.IndexImgServiceImpl:40 >> 加载首页轮播图成功+++++++redis
+2021-08-23-23:27:58.196INFO [http-nio-8080-exec-8]-com.xhh.onlineMall.service.impl.IndexImgServiceImpl:36 >> 加载首页轮播图开始+++++++
+2021-08-23-23:27:58.207INFO [http-nio-8080-exec-8]-com.xhh.onlineMall.service.impl.IndexImgServiceImpl:40 >> 加载首页轮播图成功+++++++redis
+2021-08-23-23:27:58.402INFO [http-nio-8080-exec-3]-com.xhh.onlineMall.service.impl.IndexImgServiceImpl:36 >> 加载首页轮播图开始+++++++
+2021-08-23-23:27:58.413INFO [http-nio-8080-exec-3]-com.xhh.onlineMall.service.impl.IndexImgServiceImpl:40 >> 加载首页轮播图成功+++++++redis
+2021-08-23-23:27:58.575INFO [http-nio-8080-exec-1]-com.xhh.onlineMall.service.impl.IndexImgServiceImpl:36 >> 加载首页轮播图开始+++++++
+2021-08-23-23:27:58.586INFO [http-nio-8080-exec-1]-com.xhh.onlineMall.service.impl.IndexImgServiceImpl:40 >> 加载首页轮播图成功+++++++redis
+2021-08-23-23:27:58.769INFO [http-nio-8080-exec-6]-com.xhh.onlineMall.service.impl.IndexImgServiceImpl:36 >> 加载首页轮播图开始+++++++
+2021-08-23-23:27:58.779INFO [http-nio-8080-exec-6]-com.xhh.onlineMall.service.impl.IndexImgServiceImpl:40 >> 加载首页轮播图成功+++++++redis
+2021-08-23-23:27:58.944INFO [http-nio-8080-exec-5]-com.xhh.onlineMall.service.impl.IndexImgServiceImpl:36 >> 加载首页轮播图开始+++++++
+2021-08-23-23:27:58.954INFO [http-nio-8080-exec-5]-com.xhh.onlineMall.service.impl.IndexImgServiceImpl:40 >> 加载首页轮播图成功+++++++redis
+2021-08-23-23:28:01.397INFO [http-nio-8080-exec-4]-com.xhh.onlineMall.service.impl.IndexImgServiceImpl:36 >> 加载首页轮播图开始+++++++
+2021-08-23-23:28:01.407INFO [http-nio-8080-exec-4]-com.xhh.onlineMall.service.impl.IndexImgServiceImpl:40 >> 加载首页轮播图成功+++++++redis
+2021-08-23-23:28:16.595INFO [http-nio-8080-exec-7]-com.xhh.onlineMall.service.impl.IndexImgServiceImpl:36 >> 加载首页轮播图开始+++++++
+2021-08-23-23:28:25.291INFO [http-nio-8080-exec-7]-com.xhh.onlineMall.service.impl.IndexImgServiceImpl:40 >> 加载首页轮播图成功+++++++redis
+2021-08-23-23:28:34.945INFO [http-nio-8080-exec-9]-com.xhh.onlineMall.service.impl.IndexImgServiceImpl:36 >> 加载首页轮播图开始+++++++
+2021-08-23-23:28:39.928INFO [http-nio-8080-exec-9]-com.xhh.onlineMall.service.impl.IndexImgServiceImpl:40 >> 加载首页轮播图成功+++++++redis
+2021-08-23-23:28:44.712INFO [http-nio-8080-exec-8]-com.xhh.onlineMall.service.impl.IndexImgServiceImpl:36 >> 加载首页轮播图开始+++++++
+2021-08-23-23:28:44.722INFO [http-nio-8080-exec-8]-com.xhh.onlineMall.service.impl.IndexImgServiceImpl:40 >> 加载首页轮播图成功+++++++redis
+2021-08-23-23:28:47.823INFO [http-nio-8080-exec-2]-com.xhh.onlineMall.service.impl.IndexImgServiceImpl:36 >> 加载首页轮播图开始+++++++
+2021-08-23-23:28:47.833INFO [http-nio-8080-exec-2]-com.xhh.onlineMall.service.impl.IndexImgServiceImpl:40 >> 加载首页轮播图成功+++++++redis
+2021-08-23-23:29:04.006INFO [http-nio-8080-exec-3]-com.xhh.onlineMall.service.impl.IndexImgServiceImpl:36 >> 加载首页轮播图开始+++++++
+2021-08-23-23:29:04.017INFO [http-nio-8080-exec-3]-com.xhh.onlineMall.service.impl.IndexImgServiceImpl:40 >> 加载首页轮播图成功+++++++redis
+2021-08-23-23:29:49.837INFO [http-nio-8080-exec-10]-com.xhh.onlineMall.service.impl.IndexImgServiceImpl:36 >> 加载首页轮播图开始+++++++
+2021-08-23-23:29:49.852INFO [http-nio-8080-exec-10]-com.xhh.onlineMall.service.impl.IndexImgServiceImpl:40 >> 加载首页轮播图成功+++++++redis
+2021-08-23-23:29:51.197INFO [http-nio-8080-exec-6]-com.xhh.onlineMall.service.impl.IndexImgServiceImpl:36 >> 加载首页轮播图开始+++++++
+2021-08-23-23:29:51.207INFO [http-nio-8080-exec-6]-com.xhh.onlineMall.service.impl.IndexImgServiceImpl:40 >> 加载首页轮播图成功+++++++redis
+2021-08-23-23:30:05.704INFO [http-nio-8080-exec-5]-com.xhh.onlineMall.service.impl.IndexImgServiceImpl:36 >> 加载首页轮播图开始+++++++
+2021-08-23-23:30:05.714INFO [http-nio-8080-exec-5]-com.xhh.onlineMall.service.impl.IndexImgServiceImpl:40 >> 加载首页轮播图成功+++++++redis
+2021-08-23-23:31:43.539INFO [http-nio-8080-exec-8]-com.xhh.onlineMall.service.impl.IndexImgServiceImpl:36 >> 加载首页轮播图开始+++++++
+2021-08-23-23:31:43.549INFO [http-nio-8080-exec-8]-com.xhh.onlineMall.service.impl.IndexImgServiceImpl:40 >> 加载首页轮播图成功+++++++redis
+2021-08-23-23:31:57.420INFO [http-nio-8080-exec-9]-com.xhh.onlineMall.service.impl.IndexImgServiceImpl:36 >> 加载首页轮播图开始+++++++
+2021-08-23-23:31:57.431INFO [http-nio-8080-exec-9]-com.xhh.onlineMall.service.impl.IndexImgServiceImpl:40 >> 加载首页轮播图成功+++++++redis
+2021-08-23-23:32:06.916INFO [http-nio-8080-exec-8]-com.xhh.onlineMall.service.impl.IndexImgServiceImpl:36 >> 加载首页轮播图开始+++++++
+2021-08-23-23:32:06.927INFO [http-nio-8080-exec-8]-com.xhh.onlineMall.service.impl.IndexImgServiceImpl:40 >> 加载首页轮播图成功+++++++redis
+2021-08-23-23:32:33.736INFO [http-nio-8080-exec-4]-com.xhh.onlineMall.service.impl.IndexImgServiceImpl:36 >> 加载首页轮播图开始+++++++
+2021-08-23-23:32:33.747INFO [http-nio-8080-exec-4]-com.xhh.onlineMall.service.impl.IndexImgServiceImpl:40 >> 加载首页轮播图成功+++++++redis
+2021-08-23-23:32:35.278INFO [http-nio-8080-exec-2]-com.xhh.onlineMall.service.impl.IndexImgServiceImpl:36 >> 加载首页轮播图开始+++++++
+2021-08-23-23:32:35.289INFO [http-nio-8080-exec-2]-com.xhh.onlineMall.service.impl.IndexImgServiceImpl:40 >> 加载首页轮播图成功+++++++redis
+2021-08-23-23:32:35.792INFO [http-nio-8080-exec-5]-com.xhh.onlineMall.service.impl.IndexImgServiceImpl:36 >> 加载首页轮播图开始+++++++
+2021-08-23-23:32:35.804INFO [http-nio-8080-exec-5]-com.xhh.onlineMall.service.impl.IndexImgServiceImpl:40 >> 加载首页轮播图成功+++++++redis
+2021-08-23-23:32:35.983INFO [http-nio-8080-exec-6]-com.xhh.onlineMall.service.impl.IndexImgServiceImpl:36 >> 加载首页轮播图开始+++++++
+2021-08-23-23:32:35.993INFO [http-nio-8080-exec-6]-com.xhh.onlineMall.service.impl.IndexImgServiceImpl:40 >> 加载首页轮播图成功+++++++redis
+2021-08-23-23:32:36.158INFO [http-nio-8080-exec-3]-com.xhh.onlineMall.service.impl.IndexImgServiceImpl:36 >> 加载首页轮播图开始+++++++
+2021-08-23-23:32:36.171INFO [http-nio-8080-exec-3]-com.xhh.onlineMall.service.impl.IndexImgServiceImpl:40 >> 加载首页轮播图成功+++++++redis
+2021-08-23-23:32:44.395INFO [http-nio-8080-exec-9]-com.xhh.onlineMall.service.impl.IndexImgServiceImpl:36 >> 加载首页轮播图开始+++++++
+2021-08-23-23:32:44.420INFO [http-nio-8080-exec-9]-com.xhh.onlineMall.service.impl.IndexImgServiceImpl:40 >> 加载首页轮播图成功+++++++redis
+2021-08-23-23:32:45.137INFO [http-nio-8080-exec-10]-com.xhh.onlineMall.service.impl.IndexImgServiceImpl:36 >> 加载首页轮播图开始+++++++
+2021-08-23-23:32:45.151INFO [http-nio-8080-exec-10]-com.xhh.onlineMall.service.impl.IndexImgServiceImpl:40 >> 加载首页轮播图成功+++++++redis
+2021-08-23-23:32:46.445INFO [http-nio-8080-exec-7]-com.xhh.onlineMall.service.impl.IndexImgServiceImpl:36 >> 加载首页轮播图开始+++++++
+2021-08-23-23:32:46.462INFO [http-nio-8080-exec-7]-com.xhh.onlineMall.service.impl.IndexImgServiceImpl:40 >> 加载首页轮播图成功+++++++redis
+2021-08-23-23:32:47.350INFO [http-nio-8080-exec-5]-com.xhh.onlineMall.service.impl.IndexImgServiceImpl:36 >> 加载首页轮播图开始+++++++
+2021-08-23-23:32:47.365INFO [http-nio-8080-exec-5]-com.xhh.onlineMall.service.impl.IndexImgServiceImpl:40 >> 加载首页轮播图成功+++++++redis
+2021-08-23-23:32:47.860INFO [http-nio-8080-exec-8]-com.xhh.onlineMall.service.impl.IndexImgServiceImpl:36 >> 加载首页轮播图开始+++++++
+2021-08-23-23:32:47.870INFO [http-nio-8080-exec-8]-com.xhh.onlineMall.service.impl.IndexImgServiceImpl:40 >> 加载首页轮播图成功+++++++redis
+2021-08-23-23:32:48.252INFO [http-nio-8080-exec-4]-com.xhh.onlineMall.service.impl.IndexImgServiceImpl:36 >> 加载首页轮播图开始+++++++
+2021-08-23-23:32:48.264INFO [http-nio-8080-exec-4]-com.xhh.onlineMall.service.impl.IndexImgServiceImpl:40 >> 加载首页轮播图成功+++++++redis
+2021-08-23-23:32:48.614INFO [http-nio-8080-exec-6]-com.xhh.onlineMall.service.impl.IndexImgServiceImpl:36 >> 加载首页轮播图开始+++++++
+2021-08-23-23:32:48.626INFO [http-nio-8080-exec-6]-com.xhh.onlineMall.service.impl.IndexImgServiceImpl:40 >> 加载首页轮播图成功+++++++redis
+2021-08-23-23:32:49.133INFO [http-nio-8080-exec-3]-com.xhh.onlineMall.service.impl.IndexImgServiceImpl:36 >> 加载首页轮播图开始+++++++
+2021-08-23-23:32:49.145INFO [http-nio-8080-exec-3]-com.xhh.onlineMall.service.impl.IndexImgServiceImpl:40 >> 加载首页轮播图成功+++++++redis
+2021-08-23-23:32:57.665INFO [http-nio-8080-exec-1]-com.xhh.onlineMall.service.impl.IndexImgServiceImpl:36 >> 加载首页轮播图开始+++++++
+2021-08-23-23:32:57.682INFO [http-nio-8080-exec-1]-com.xhh.onlineMall.service.impl.IndexImgServiceImpl:40 >> 加载首页轮播图成功+++++++redis
+2021-08-23-23:33:02.046INFO [http-nio-8080-exec-7]-com.xhh.onlineMall.service.impl.IndexImgServiceImpl:36 >> 加载首页轮播图开始+++++++
+2021-08-23-23:33:02.071INFO [http-nio-8080-exec-7]-com.xhh.onlineMall.service.impl.IndexImgServiceImpl:40 >> 加载首页轮播图成功+++++++redis
+2021-08-23-23:33:07.177INFO [http-nio-8080-exec-2]-com.xhh.onlineMall.service.impl.IndexImgServiceImpl:36 >> 加载首页轮播图开始+++++++
+2021-08-23-23:33:07.191INFO [http-nio-8080-exec-2]-com.xhh.onlineMall.service.impl.IndexImgServiceImpl:40 >> 加载首页轮播图成功+++++++redis
+2021-08-23-23:33:13.800INFO [SpringContextShutdownHook]-org.quartz.core.QuartzScheduler:585 >> Scheduler quartzScheduler_$_NON_CLUSTERED paused.
+2021-08-23-23:33:13.887INFO [SpringContextShutdownHook]-org.springframework.scheduling.concurrent.ExecutorConfigurationSupport:218 >> Shutting down ExecutorService 'taskScheduler'
+2021-08-23-23:33:13.887INFO [SpringContextShutdownHook]-org.springframework.scheduling.quartz.SchedulerFactoryBean:845 >> Shutting down Quartz Scheduler
+2021-08-23-23:33:13.888INFO [SpringContextShutdownHook]-org.quartz.core.QuartzScheduler:666 >> Scheduler quartzScheduler_$_NON_CLUSTERED shutting down.
+2021-08-23-23:33:13.888INFO [SpringContextShutdownHook]-org.quartz.core.QuartzScheduler:585 >> Scheduler quartzScheduler_$_NON_CLUSTERED paused.
+2021-08-23-23:33:13.888INFO [SpringContextShutdownHook]-org.quartz.core.QuartzScheduler:740 >> Scheduler quartzScheduler_$_NON_CLUSTERED shutdown complete.
+2021-08-23-23:33:13.888INFO [SpringContextShutdownHook]-org.springframework.scheduling.concurrent.ExecutorConfigurationSupport:218 >> Shutting down ExecutorService 'applicationTaskExecutor'
+2021-08-23-23:33:14.016INFO [SpringContextShutdownHook]-com.alibaba.druid.pool.DruidDataSource:2029 >> {dataSource-1} closing ...
+2021-08-23-23:33:14.019INFO [SpringContextShutdownHook]-com.alibaba.druid.pool.DruidDataSource:2101 >> {dataSource-1} closed
