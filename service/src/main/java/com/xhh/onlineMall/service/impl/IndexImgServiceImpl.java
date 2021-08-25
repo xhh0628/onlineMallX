@@ -4,6 +4,7 @@ import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.JavaType;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.xhh.onlineMall.dao.IndexImgMapper;
+import com.xhh.onlineMall.entity.CategoryVO;
 import com.xhh.onlineMall.entity.IndexImg;
 import com.xhh.onlineMall.entity.ProductImg;
 import com.xhh.onlineMall.service.IndexImgService;
@@ -47,12 +48,13 @@ public class IndexImgServiceImpl implements IndexImgService {
                 List<IndexImg> indexImgs = indexImgMapper.selectIndexImgs();
                 if (indexImgs.size()==0){
                     logger.info("加载首页轮播图成功-------");
+                    List<IndexImg> arr=new ArrayList<>();
+                    //二次判断，防止redis穿透
+                    stringRedisTemplate.boundValueOps("categories").set(objectMapper.writeValueAsString(arr),10, TimeUnit.SECONDS);
                     return new ResultVO(ResStatus.NO,"fail",null);
                 }else{
-                    //写入redis
-                    stringRedisTemplate.boundValueOps("indexImgs").set(objectMapper.writeValueAsString(indexImgs));
-                    //设置redis过期时间为1天
-                    stringRedisTemplate.boundValueOps("indexImgs").expire(1, TimeUnit.DAYS);
+                    //写入redis,设置过期时间为1天
+                    stringRedisTemplate.boundValueOps("indexImgs").set(objectMapper.writeValueAsString(indexImgs),1, TimeUnit.DAYS);
                     logger.info("redis写入轮播图缓存+++++++成功");
                     logger.info("加载首页轮播图成功+++++++DB");
                     return new ResultVO(ResStatus.OK,"success",indexImgs);
